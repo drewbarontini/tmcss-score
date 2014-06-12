@@ -1,0 +1,80 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  background: $c-background
+  color: $c-base
+  font-family: $f-base
+  font-size: $b-fontSize
+  line-height: $b-lineHeight
+
+body
+  font-size: 100%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul, ol, p
+  margin-bottom: $b-whitespace
+  margin-top: 0
+
+ol, ul
+  padding: 0
+  padding-left: $b-whitespace-l
+
+li
+  margin-bottom: $b-whitespace-s
+  margin-top: 0
+
+// ----- Headers ----- //
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  font-family: $f-header
+  font-weight: 300
+  line-height: 1.2
+  margin-bottom: $b-whitespace-xs
+  margin-top: 0
+  text-transform: uppercase
+
+h1, .h1
+  font-size: 200%
+
+h2, .h2
+  font-size: 150%
+
+h3, .h3
+  font-size: 125%
+
+h4, .h4
+  font-size: 110%
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  color: $c-highlight
+  &:hover,
+  &:focus
+    color: $c-subdue
+
+code
+  border: $b-border
+  border-radius: $b-borderRadius
+  font-family: $f-mono
+  font-size: 75%
+  padding: 0.1em 0.2em
+
+img
+  display: block
+  height: auto
+  margin: 0 auto
+  max-width: 100%

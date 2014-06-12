@@ -1,0 +1,72 @@
+- description: >
+    The name of this talk is *"Thinking Modular CSS."* Before we get started, I’d
+    like to take a moment and talk about **Dan Denney**.
+
+- partial: true
+
+- description: >
+    In all seriousness, though, I love this conference. I've only missed it
+    once, and I look forward to it every year. The Denney family does a
+    tremendous job, and I’m super pumped to be here, and to be speaking to all
+    of you.
+
+- description: >
+    And as proof that I’ve been here before, here is a picture of me from last
+    year. Funny story: in our company chatroom, if you use the word
+    "unimpressed", this picture shows up because, apparently, I look
+    unimpressed.
+
+- description: >
+    However, I think I was more just in awe while looking at all the bacon.
+
+- description: >
+    So what am I hear to talk about? This talk is called, "Thinking Modular
+    CSS". What does that mean?
+
+- partial: true
+
+- partial: true
+
+- description: >
+    Before we get into that, I want to give you some information about me.  I'm
+    **Drew Barontini**. You can find me on Twitter, or most places on the
+    Internet, [@drewbarontini](http://twitter.com/drewbarontini).
+
+
+    I do say "most places on the internet" because I use that handle
+    *everywhere*. If I'm on the service, that's my username.
+
+- description: >
+    I'm a front-end developer at Code School.
+
+- description: >
+    We have our offices right over in Orlando. Being in Orlando, we get to have fun company events, like...
+  additional_images: true
+  additional_images_number: 1
+
+- title: Epcot Food & Wine Festival
+  description : >
+    Trips to the Epcot Food & Wine Festival each year, where we get to eat good
+    food, have intense "Rock, Paper Scissors" battles, and enjoy drinks and one
+    another's company.
+  additional_images: true
+  additional_images_number: 2
+
+- title: WhirlyBall
+  description : >
+    We also have enjoyed in several games of WhirlyBall.
+
+- title: Orlando Magic
+  description : >
+    And occasionally we go to an Orlando Magic basketball game.
+
+- title: What is Code School?
+  description : >
+    If you're not familiar with Code School, it is an online platform for
+    teaching web technologies.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    We have interactive courses teaching technologies like Ruby on Rails, Sass,
+    Git, Angular, iOS, and a lot of other languages and frameworks.
