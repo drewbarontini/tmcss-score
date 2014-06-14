@@ -70,3 +70,487 @@
 - description: >
     We have interactive courses teaching technologies like Ruby on Rails, Sass,
     Git, Angular, iOS, and a lot of other languages and frameworks.
+
+- title: What are my responsibilities?
+  description : >
+    - Our .com, codeschool.com, holds all of our courses, our users, our teams,
+      and it allows them to track their progress and pick and choose which
+      courses to take.
+
+
+    - I’m also responsible for our course engine, which is a separate entity
+      from the .com, and it’s what runs each course.
+
+
+    - In addition to that, I also oversee the buildout of individual courses,
+      as well as keeping courses up-to-date.
+
+- title: What has been my journing into front-end development?
+  description : >
+    This is a question that we ask all new hires because it’s really
+    interesting to see the various paths people have taken to the field,
+    particularly into “front-end development.”
+
+- description: >
+    For me, it all started when I was in a band back in High School and into
+    College. Music is a creative field, obviously, but it was actually the
+    abundance of design and web needs for the band that got me started.
+
+- description: >
+    MySpace was a really big thing for bands back in the day (not sure what it
+    is now?), and we didn’t have the money to pay a web designer to create a
+    custom MySpace page, so I took a stab at it. Little did I know, I’d really
+    find a passion in the horrid CSS I wrote for custom MySpace pages.
+
+
+    **Side note**: if anyone in here ever did custom MySpace pages, let’s get
+    together at some point and share a good cry. You will understand.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    Eventually, that evolved into more traditional illustration and graphic
+    design, primarily for custom t-shirt and apparel designs. This was a really
+    big component in the music world; custom t-shirt designs. There was a great
+    community of designers that I learned a lot from.
+
+- description: >
+    However, I continued honing my HTML, CSS, and JavaScript skills in college,
+    and ultimately became interested in more advanced, traditional programming.
+
+- description: >
+    I took some computer science classes in college, and I became fascinated
+    with programming.
+
+- description: >
+    Ultimately, the balance and blend of design and programming landed me right
+    where I'm happy to be now, front-end development.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    "Front-end Development" truly is a specialization; it's a craft, and it's
+    not easy to do. It's not just for designers who code or developers who
+    write HTML & CSS.
+
+- description: >
+    It's an area of focus for unique individuals with particular skill sets.
+
+- description: >
+    "Particular skills."
+
+- description: >
+    Developers used to trample over the HTML and CSS, largely qualifying their
+    actions as "HTML and CSS are so easy, any of us can write it."
+
+- description: >
+    Although HTML and CSS are easy to write, they aren't easy to write well.
+
+- description: >
+    Our styles are built out on large-scale applications that need to be
+    performant and easily understood by a large team.
+
+- description: >
+    Our styles need to be flexible so that we can add new features and pages,
+    as well as have a solid foundation for each new site or application that we
+    build.
+
+- description: >
+    In order to create flexible and modular systems, we have to adhere to the
+    ideas of "Modular CSS," so let's talk about those ideas.
+
+    Before we dig into the thinking behind modular CSS, it's important to
+    define it, and talk about the tenets of modular CSS.
+
+- description: >
+    I will use the words module, pattern, and component interchangeably; they
+    all refer to a set of self-contained styles.
+
+- description: >
+    We've made a shift from thinking of our styling in terms of pages to
+    styling in terms of components (patterns, modules).
+
+
+    Instead of looking at a page and defining it as its whole, we now need to
+    look at all the various modules that make up the page.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    Dave Rupert says it best when he says that we should focus on creating
+    front-end modules as reusable solutions for complex pages.
+
+- description: >
+    This page isn't the "Home Page" of [ted.com](http://ted.com).
+
+- description: >
+    It's a collection of front-end modules that create reusable style patterns.
+
+
+    Modular design is the principle that we use to get there.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    "Modular design" is defined as an approach that subdivides a system into...
+    blah, blah blah.
+
+- description: >
+    Your CSS should be:
+
+
+    - Broken down into smaller parts, smaller chunks of styles.
+
+    - Independently created, so you're modules can be properly encapsulated
+      (which we'll get more into in a bit).
+
+    - Have the ability to be ported from system to system with minor
+      modifications, whether it's another site, or simply various containers
+      within the site.
+
+- description: >
+    Breaking your CSS down into smaller chunks will ultimately result in more
+    maintainable code. Let's look at an example.
+
+- description: >
+    We have a thumb module, which applies a small set of extendable styles for
+    handling thumbnails, such as circle avatars.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    Those concepts are present in the "Single Responsibility Principle," which
+    is something that I always try to adhere to.
+
+- description: >
+    The single responsibility principle states that every class should have a
+    single responsibility, and that responsibility should be entirely
+    encapsulated by the class. All its services should be narrowly aligned with
+    that responsibility.
+
+
+    Let's talk about two separate parts of that definition. Firstly, our CSS
+    modules should only have one responsibility, one job.
+
+- description: >
+    It's helpful, when creating your modules, to add a comment block at the top
+    of the file that explains, in one sentence, what that module does; what is
+    its responsibility.
+
+
+    Now we know what our module is responsible for, so we can build it.
+
+- description: >
+    Here we have the cell module that handles the container for content. It
+    makes sure that a section is centered and has its max-width set
+    appropriately.
+
+- description: >
+    This module only handles width limiting, and it adheres to the Single
+    Responsibility Principle.
+
+- description: >
+    But what about the second part of the definiton: "encapsulated by the class"?
+
+- description: >
+    In our newest course interface at Code School, we have this bar at the
+    bottom of the interface, which we call the omnibar.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    In the omnibar, there is a button on the far right.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    The markup for the button looks like this:
+
+
+    We want this button to be positioned absolutely to the bottom right. So how
+    could we go about this?
+
+- description: >
+    We could just target the `.btn` and position it. Obviously, though, we don't
+    want every button to be absolutely positioned. Okay, let’s scope it.
+
+- description: >
+    We could just target the `.btn` within the `.omnibar`, but we're breaking
+    the idea of encapsulation by having our two modules know about, and talk to one
+    another. Let's change this.
+
+- description: >
+    We add a new submodule class to the button, and now we can target that
+    class.
+
+- description: >
+    We add both the `.omnibar-btn` and `.btn` class to the element to handle
+    their own responsibilities.
+
+
+    Now, as we want, the `.omnibar` module only knows about itself, and it
+    handles how its elements are positioned. The button adds the styling, but
+    doesn't need to know about how it's being positioned within the `.omnibar`.
+
+- description: >
+    Positioning and layout are constant struggles with modular CSS.
+
+- description: >
+    You'll have to abstract a lot of the layout styling to a more global
+    component to keep your modules properly encapsulated.
+
+- description: >
+    Now let's look at some more practical applications of "Modular CSS."
+
+
+    This one seems to be more commonplace these days, but it's still worth
+    mentioning: It's best to stick with only using classes, avoiding IDs
+    altogether.
+
+- description: >
+    IDs are too specific, and they'll cause you unnecessary headaches.
+
+- description: >
+    Classes, on the other hand, flatten the specificity of your elements to
+    make sure your styles are applied properly without having to fuss with
+    specificity issues.
+
+- description: >
+    This may seem redundant, but we want to call `.table`, not `table`.
+  additional_images: true
+  additional_images_number: 2
+
+- description: >
+    The next practical application of modular CSS is to establish naming conventions.
+
+
+    It doesn't matter as much what your naming conventions are, just that you
+    have them. Decide with your team (or yourself) what those should be, and
+    make sure to stick with the system, but be open to evolving it over time.
+
+- description: >
+    Nick Walsh, a front-end developer at Envy Labs, had this great quote that
+    we always reference when we talk about how we write our CSS, and how
+    frequently we change it.
+
+- description: >
+    It's very true. We constantly evaluate and evolve the system as we work on
+    new projects, but that’s what makes the system better: **constant evaluation**.
+
+- description: >
+    At Code School (and Envy Labs), we use [MVCSS](http://mvcss.github.io),
+    which is a Sass-based CSS architecture that I created with Nick. To give
+    you a sample of some naming conventions, I'll talk about how we do things.
+
+- description: >
+    *This is by no means preaching our method. This is merely an example that
+    can help guide you to establishing your own naming conventions.*
+
+- description: >
+    We use camelCase for multiple words, and we use a hyphen to separate a
+    module from a submodule.
+
+- description: >
+    If you're familiar with the [BEM Methodology](http://bem.info/method/),
+    this is the same idea.
+
+- description: >
+    A modifier is an alternate set of styling on a module.
+
+- description: >
+    Say, for example, we have these two buttons. The button on the left is our
+    base button, and the button on the right is an alternate styling of the
+    base button.
+
+- description: >
+    Here are our base `.btn`. styles.
+
+- description: >
+    We use double-hyphens (`--`) to denote a modifier.
+
+- description: >
+    So here we define our button modifier, which is an alternate styling of the
+    base `.btn`.
+
+- description: >
+    We call our `.btn` class for the base button, and add both the base `.btn`
+    class and the `.btn--b` modifier class on the modified button.
+
+- description: >
+    Next we have **States**.
+
+- description: >
+    **States** are generally used for hooks that are added conditionally via
+    JavaScript.
+
+- description: >
+    We use the convention `is` hyphen (`-`) state name.
+
+- description: >
+    So, for example, we have this `.dropdown` that is hidden by default, and is
+    shown when the `.is-active` state class is added. Simple as that.
+
+- description: >
+    Next, we have **Context**. Oftentimes, in CSS, we'll need a parent
+    container to be adjusted in order for our module to be styled correctly.
+    For this, we use a context class.
+
+- description: >
+    We use the convention `has` hyphen (`-`) context name.
+
+- description: >
+    Let's say that we have a `.dropdown module`, and when that `.dropdown` is
+    inside of a parent container, it needs to have `position: relative` on that
+    parent container to set the positioning context. Rather than adding `position:
+    relative` to that parent container, we can use a "context" class to handle
+    this for us:
+
+- description: >
+    And then we add that context class to our parent container.
+
+- description: >
+    That's a brief look at the naming conventions and structure that our team
+    uses, and hopefully it's a useful example that you can work off of. We
+    borrowed a lot of ideas from great methodologies created by insanely smart
+    people.
+
+
+    Make sure you look at all these methodologies, as one might fit your way of
+    working the best. They are also great starting points to building your own
+    system.
+
+- description: >
+    The next practical application of modular CSS is to limit your nesting.
+
+- description: >
+    This tenet applies specifically to CSS preprocessors, like Sass and LESS,
+    that allow you to nest your selectors. This is important to talk about
+    because of the popularity and widespread use of CSS preprocessors
+
+- description: >
+    Although nesting is an attractive feature, and one touted by most
+    "Beginner's Guide to Sass" tutorials out there, it's something you have to
+    be very careful with.
+
+- description: >
+    When I used Sass for the first time on a project, I nested everything
+    inside of `section.content`. It was an absolute nightmare. **DO NOT** do
+    this.
+
+- description: >
+    Now, we don't nest much, and when we do, it's not many levels deep. We
+    generally only nest things like `:hover`, `:focus`, `::before`, `::after`,
+    `:last-child`, etc.
+
+- description: >
+    And, when you have them, modifiers that alter submodules.
+
+- description: >
+    Next, avoid magic numbers. What am I talking about when I say "magic
+    numbers"?
+
+- description: >
+    You know what this is. We all do it. These "magic numbers" are best to
+    avoid whenever possible. You want your styles to be predictable and
+    flexible, and these "magic numbers" break that. However, when you do use
+    them, which is sometimes unavoidable, make sure to document it.
+
+- description: >
+    Now I have a way to search across the project and find the magic numbers
+    whenever I do a refactor.
+
+- description: >
+    In addition to magic numbers, layout and positioning in CSS can cause you a
+    lot of headaches when trying to keep your styles flexible. Let's look at an
+    example.
+
+- description: >
+    This is all well and good until we have a second .nav block that needs to
+    be positioned to the left, or even centered.
+
+- description: >
+    Ask yourself, why is this navigation block being positioned to the right at
+    50%?
+
+- description: >
+    Is it because it's in another module?
+
+- description: >
+    Abstract up!
+
+- description: >
+    Use something like a grid to handle the structure. The individual module
+    doesn't need to control its layout; it should flex and fit in any
+    container.
+
+- description: >
+    A higher-level module now handles the structure.
+
+- description: >
+    We've seen a gradual shift in the way that we think about modular CSS, and
+    how our styles should be written. Let's look at an example.
+
+- description: >
+    We'll use the Dribbble shot as an example. How would we have marked this
+    up initially with the advent of "modular" CSS?
+
+- description: >
+    Initially, we would have marked this up with a class of `shot`, and then
+    all of our HTML elements inside.
+
+- description: >
+    We called those elements scoped within the `.shot` class.
+
+- description: >
+    This worked, but we quickly ran into issues when we changed the markup.
+    What happens when that `h2` turns into an `h3`?
+
+- description: >
+    Well, not only do you have to change it in the HTML, but you also have to
+    change it in the CSS.
+
+- description: >
+    Ok ok, we'll scope everything to the `.shot`!
+
+- description: >
+    We add a `shot-` class to everything within the `.shot`.
+
+- description: >
+    Now we have hooks to target each of our elements.
+
+- description: >
+    We have another problem. What if we use this same pattern for another
+    element that isn't a "shot"? The name "shot" doesn't really make sense for
+    that element, so we need to make it something more abstract.
+
+- description: >
+    Ok ok, we'll abstract the name!
+
+- description: >
+    Okay, we call it a card; that's way more abstract, so we're good, right?
+    Well not quite.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    We realize now that our `.card-list` styles are being duplicated on
+    different lists throughout the site. We need to pull that out. I think you
+    see where this is headed.
+
+- description: >
+    We change the `.card-list` to `.list`.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    And this keeps happening for all of the elements in the `.card` until we
+    realize that it's not a card, it's a collection of independently created
+    modules that can be used together to create multiple style patterns.
+  additional_images: true
+  additional_images_number: 2
+
+- description: >
+    How do we find these patterns?
+
+- description: >
+    By establishing a process.
