@@ -243,7 +243,7 @@
 
 - description: >
     Here we have the cell module that handles the container for content. It
-    makes sure that a section is centered and has its max-width set
+    makes sure that a section is centered and has its `max-width` set
     appropriately.
 
 - description: >
