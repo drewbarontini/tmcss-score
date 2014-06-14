@@ -3,17 +3,16 @@
   %head
     %meta{ :charset => 'utf-8' }
     %meta{ :content => 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
     %title= data.config.title
 
     = stylesheet_link_tag 'application'
 
   %body{ class: page_classes }
 
-    %header.header.tac
-      .row.bci
-        .cell.well.well--l
-          %h1.mbf= data.config.title
-          %p.mbf.tcs= data.config.description
+    = partial 'shared/modal'
+
+    = partial 'shared/header'
 
     %main.content
       .row
