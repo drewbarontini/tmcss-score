@@ -10,7 +10,7 @@ Slidescore = do ->
   #   Variables
   # -------------------------------------
 
-  options: {}
+  settings = {}
 
   index = 0
 
@@ -22,21 +22,31 @@ Slidescore = do ->
     'next'  : 39
     'prev'  : 37
     'space' : 32
-    'q'     : 16
+    'q'     : 191
     'esc'   : 27
+
+  slidesLength = 0
 
   # -------------------------------------
   #   Init
   #   -> Initialize the module
+  # -------------------------------------
+
+  init = ->
+    slidesLength = settings.slides.length
+    setEvents()
+    setLocation() if window.location.hash
+    fixBrokenImages()
+
+  # -------------------------------------
+  #   Set Options
+  #   -> Sets the options object
   #
   #   options - the options object
   # -------------------------------------
 
-  init = (options) ->
-    Slidescore.options = options
-    Slidescore.slidesLength = Slidescore.options.slides.length
-    setEvents()
-    setLocation() if window.location.hash
+  setOptions = (options) ->
+    settings = options
 
   # -------------------------------------
   #   Set Events
@@ -45,20 +55,32 @@ Slidescore = do ->
 
   setEvents = ->
     $(document).on 'keydown', (e) ->
-      switch e.which
+      switch getKeyCode(e)
         when shortcuts.h then setSlide(1)
         when shortcuts.j then nextSlide()
         when shortcuts.next then nextSlide()
         when shortcuts.space then nextSlide()
         when shortcuts.k then prevSlide()
         when shortcuts.prev then prevSlide()
-        when shortcuts.l then setSlide(Slidescore.slidesLength)
-        when shortcuts.q then modal('open')
+        when shortcuts.l then setSlide(slidesLength)
+        when e.shiftKey && shortcuts.q then modal('open')
         when shortcuts.esc then modal('close')
 
-    Slidescore.options.modal.on 'click', (e) ->
+    settings.modal.on 'click', (e) ->
       e.preventDefault()
       modal('close')
+
+  # -------------------------------------
+  #   Get Key Code
+  #   -> Return the appropriate key code
+  #
+  #   e - The event object
+  # -------------------------------------
+
+  getKeyCode = (e) ->
+    e = e || window.event
+    charCode = e.keyCode || e.which
+    charCode
 
   # -------------------------------------
   #   Set Location
@@ -87,7 +109,7 @@ Slidescore = do ->
   # -------------------------------------
 
   nextSlide = ->
-    unless index == Slidescore.slidesLength
+    unless index == slidesLength
       index++
       scrollTo()
       changeUrl()
@@ -114,8 +136,8 @@ Slidescore = do ->
     to = $("section[data-id='#{i}']")
 
     $('body, html').animate({
-      scrollTop: parseInt( $(to).offset().top - Slidescore.options.offsetPadding )
-    }, Slidescore.options.scrollSpeed)
+      scrollTop: parseInt( $(to).offset().top - settings.offsetPadding )
+    }, settings.scrollSpeed)
 
   # -------------------------------------
   #   Change URL
@@ -132,14 +154,24 @@ Slidescore = do ->
   # -------------------------------------
 
   modal = (action) ->
-    Slidescore.options.modal.toggleClass('is-active') if action == 'open'
-    Slidescore.options.modal.removeClass('is-active') if action == 'close'
+    settings.modal.toggleClass('is-active') if action == 'open'
+    settings.modal.removeClass('is-active') if action == 'close'
+
+  # -------------------------------------
+  #   Set Broken Images
+  #   -> Sets a placehold image for unloaded images
+  # -------------------------------------
+
+  fixBrokenImages = ->
+    $('img').error ->
+      $(@).attr('src', "http://placehold.it/1024x768/000/000/")
 
   # -------------------------------------
   #   Public Methods
   # -------------------------------------
 
   init: init
+  setOptions: setOptions
 
 # -------------------------------------
 #   Document Ready
@@ -152,5 +184,6 @@ $ ->
     offsetPadding: 40
     modal: $('.modal')
 
-  Slidescore.init(options)
+  Slidescore.setOptions(options)
+  Slidescore.init()
 
