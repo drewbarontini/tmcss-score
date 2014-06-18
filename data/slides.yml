@@ -92,48 +92,8 @@
     - In addition to that, I also oversee the buildout of individual courses,
       as well as keeping courses up-to-date.
 
-- title: What has been my journey into front-end development?
-  description : >
-    This is a question that we ask all new hires because it’s really
-    interesting to see the various paths people have taken to the field,
-    particularly into “front-end development.”
-
 - description: >
-    For me, it all started when I was in a band back in High School and into
-    College. Music is a creative field, obviously, but it was actually the
-    abundance of design and web needs for the band that got me started.
-
-- description: >
-    MySpace was a really big thing for bands back in the day (not sure what it
-    is now?), and we didn’t have the money to pay a web designer to create a
-    custom MySpace page, so I took a stab at it. Little did I know, I’d really
-    find a passion in the horrid CSS I wrote for custom MySpace pages.
-
-
-    **Side note**: if anyone in here ever did custom MySpace pages, let’s get
-    together at some point and share a good cry. You will understand.
-  additional_images: true
-  additional_images_number: 1
-
-- description: >
-    Eventually, that evolved into more traditional illustration and graphic
-    design, primarily for custom t-shirt and apparel designs. This was a really
-    big component in the music world; custom t-shirt designs. There was a great
-    community of designers that I learned a lot from.
-
-- description: >
-    However, I continued honing my HTML, CSS, and JavaScript skills in college,
-    and ultimately became interested in more advanced, traditional programming.
-
-- description: >
-    I took some computer science classes in college, and I became fascinated
-    with programming.
-
-- description: >
-    Ultimately, the balance and blend of design and programming landed me right
-    where I'm happy to be now, front-end development.
-  additional_images: true
-  additional_images_number: 1
+    "Front-end Development" is what I do.
 
 - description: >
     "Front-end Development" truly is a specialization; it's a craft, and it's
@@ -436,6 +396,20 @@
     Make sure you look at all these methodologies, as one might fit your way of
     working the best. They are also great starting points to building your own
     system.
+
+- title: Submodules
+  description: >
+    **Submodules** are elements that are scoped to a parent module.
+  additional_images: true
+  additional_images_number: 1
+
+- description: >
+    For example, earlier we had `.omnibar-btn`, which was a submodule class.
+    The `btn` is a submodule of the parent `omnibar` module.
+
+- description: >
+    We use a single hyphen (`-`) to denote a submodule. So here, for example, a
+    module hyphen submodule.
 
 - title: Limit Nesting
   description: >
