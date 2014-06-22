@@ -91,8 +91,9 @@
     Although HTML and CSS are easy to write, they aren't easy to write well.
 
 - description: >
-    Our styles are built out on large-scale applications that need to be
-    performant and easily understood by a large team.
+    **We're building complex systems**.  Our styles are built out on
+    large-scale applications that need to be performant and easily understood
+    by a large team.
 
 - description: >
     Our styles need to be flexible so that we can add new features and pages,
@@ -105,8 +106,8 @@
     ideas of "Modular CSS," so let's talk about those ideas.
 
 
-    Before we dig into the thinking behind modular CSS, it's important to
-    define it, and talk about the tenets of modular CSS.
+    *Before we dig into the thinking behind modular CSS, it's important to
+    define it, and talk about the tenets of modular CSS*.
 
 - description: >
     I will use the words module, pattern, and component interchangeably; they
@@ -213,15 +214,18 @@
   additional_images_number: 1
 
 - description: >
-    The markup for the button looks like this:
+    And here is the markup for the button.
 
 
-    We want this button to be positioned absolutely to the bottom right. So how
-    could we go about this?
+    Now, we want this button to be positioned absolutely to the bottom right.
+    So how could we go about this?
 
 - description: >
-    We could just target the `.btn` and position it. Obviously, though, we don't
-    want every button to be absolutely positioned. Okay, let’s scope it.
+    We could just target the `.btn` and position it.
+
+
+    Obviously, though, we don't want every button to be absolutely positioned.
+    Okay, let’s scope it.
 
 - description: >
     We could just target the `.btn` within the `.omnibar`, but we're breaking
@@ -233,13 +237,13 @@
     class.
 
 - description: >
-    We add both the `.omnibar-btn` and `.btn` class to the element to handle
+    We add both the `omnibar-btn` and `btn` class to the element to handle
     their own responsibilities.
 
 
-    Now, as we want, the `.omnibar` module only knows about itself, and it
+    Now, as we want, the `omnibar` module only knows about itself, and it
     handles how its elements are positioned. The button adds the styling, but
-    doesn't need to know about how it's being positioned within the `.omnibar`.
+    doesn't need to know about how it's being positioned within the `omnibar`.
 
 - description: >
     Positioning and layout are constant struggles with modular CSS.
@@ -387,33 +391,6 @@
     Make sure you look at all these methodologies, as one might fit your way of
     working the best. They are also great starting points to building your own
     system.
-
-- title: Limit Nesting
-  description: >
-    The next practical application of modular CSS is to limit your nesting.
-
-- description: >
-    This tenet applies specifically to CSS preprocessors, like Sass and LESS,
-    that allow you to nest your selectors. This is important to talk about
-    because of the popularity and widespread use of CSS preprocessors.
-
-- description: >
-    Although nesting is an attractive feature, and one touted by most
-    "Beginner's Guide to Sass" tutorials out there, it's something you have to
-    be very careful with.
-
-- description: >
-    When I used Sass for the first time on a project, I nested everything
-    inside of `section.content`. It was an absolute nightmare. **DO NOT** do
-    this.
-
-- description: >
-    Now, we don't nest much, and when we do, it's not many levels deep. We
-    generally only nest things like `:hover`, `:focus`, `::before`, `::after`,
-    `:last-child`, etc.
-
-- description: >
-    And, when you have them, modifiers that alter submodules.
 
 - title: Avoid Magic Numbers
   description: >

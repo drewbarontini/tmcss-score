@@ -320,7 +320,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Our styles are built out on large-scale applications that need to be performant and easily understood by a large team.</p>
+                  <p><strong>We&#39;re building complex systems</strong>.  Our styles are built out on large-scale applications that need to be performant and easily understood by a large team.</p>
                 </div>
               </div>
             </section>
@@ -347,7 +347,7 @@
                   <h1 class='h2'>Modular CSS</h1>
                   <p>In order to create flexible and modular systems, we have to adhere to the ideas of &quot;Modular CSS,&quot; so let&#39;s talk about those ideas.</p>
                   
-                  <p>Before we dig into the thinking behind modular CSS, it&#39;s important to define it, and talk about the tenets of modular CSS.</p>
+                  <p><em>Before we dig into the thinking behind modular CSS, it&#39;s important to define it, and talk about the tenets of modular CSS</em>.</p>
                 </div>
               </div>
             </section>
@@ -588,9 +588,9 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>The markup for the button looks like this:</p>
+                  <p>And here is the markup for the button.</p>
                   
-                  <p>We want this button to be positioned absolutely to the bottom right. So how could we go about this?</p>
+                  <p>Now, we want this button to be positioned absolutely to the bottom right. So how could we go about this?</p>
                 </div>
               </div>
             </section>
@@ -602,7 +602,9 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We could just target the <code>.btn</code> and position it. Obviously, though, we don&#39;t want every button to be absolutely positioned. Okay, let’s scope it.</p>
+                  <p>We could just target the <code>.btn</code> and position it.</p>
+                  
+                  <p>Obviously, though, we don&#39;t want every button to be absolutely positioned. Okay, let’s scope it.</p>
                 </div>
               </div>
             </section>
@@ -638,9 +640,9 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We add both the <code>.omnibar-btn</code> and <code>.btn</code> class to the element to handle their own responsibilities.</p>
+                  <p>We add both the <code>omnibar-btn</code> and <code>btn</code> class to the element to handle their own responsibilities.</p>
                   
-                  <p>Now, as we want, the <code>.omnibar</code> module only knows about itself, and it handles how its elements are positioned. The button adds the styling, but doesn&#39;t need to know about how it&#39;s being positioned within the <code>.omnibar</code>.</p>
+                  <p>Now, as we want, the <code>omnibar</code> module only knows about itself, and it handles how its elements are positioned. The button adds the styling, but doesn&#39;t need to know about how it&#39;s being positioned within the <code>omnibar</code>.</p>
                 </div>
               </div>
             </section>
@@ -1033,15 +1035,15 @@
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='76'>
-              <div class='grid' id='limit-nesting'>
+              <div class='grid' id='avoid-magic-numbers'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Limit Nesting" width="1024" height="768" src="assets/images/slides/76.png" />
+                    <img alt="Avoid Magic Numbers" width="1024" height="768" src="assets/images/slides/76.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Limit Nesting</h1>
-                  <p>The next practical application of modular CSS is to limit your nesting.</p>
+                  <h1 class='h2'>Avoid Magic Numbers</h1>
+                  <p>Next, avoid magic numbers. What am I talking about when I say &quot;magic numbers&quot;?</p>
                 </div>
               </div>
             </section>
@@ -1053,7 +1055,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>This tenet applies specifically to CSS preprocessors, like Sass and LESS, that allow you to nest your selectors. This is important to talk about because of the popularity and widespread use of CSS preprocessors.</p>
+                  <p>You know what this is. We all do it. These &quot;magic numbers&quot; are best to avoid whenever possible. You want your styles to be predictable and flexible, and these &quot;magic numbers&quot; break that. However, when you do use them, which is sometimes unavoidable, make sure to document it.</p>
                 </div>
               </div>
             </section>
@@ -1065,19 +1067,20 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Although nesting is an attractive feature, and one touted by most &quot;Beginner&#39;s Guide to Sass&quot; tutorials out there, it&#39;s something you have to be very careful with.</p>
+                  <p>Now I have a way to search across the project and find the magic numbers whenever I do a refactor.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='79'>
-              <div class='grid' id='slide-79'>
+              <div class='grid' id='abstract-structure'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/79.png" />
+                    <img alt="Abstract Structure" width="1024" height="768" src="assets/images/slides/79.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>When I used Sass for the first time on a project, I nested everything inside of <code>section.content</code>. It was an absolute nightmare. <strong>DO NOT</strong> do this.</p>
+                  <h1 class='h2'>Abstract Structure</h1>
+                  <p>In addition to magic numbers, layout and positioning in CSS can cause you a lot of headaches when trying to keep your styles flexible. Let&#39;s look at an example.</p>
                 </div>
               </div>
             </section>
@@ -1089,7 +1092,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now, we don&#39;t nest much, and when we do, it&#39;s not many levels deep. We generally only nest things like <code>:hover</code>, <code>:focus</code>, <code>::before</code>, <code>::after</code>, <code>:last-child</code>, etc.</p>
+                  <p>This is all well and good until we have a second <code>.nav</code> block that needs to be positioned to the left, or even centered.</p>
                 </div>
               </div>
             </section>
@@ -1101,20 +1104,19 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And, when you have them, modifiers that alter submodules.</p>
+                  <p>Ask yourself, why is this navigation block being positioned to the right at <code>50%</code>?</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='82'>
-              <div class='grid' id='avoid-magic-numbers'>
+              <div class='grid' id='slide-82'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Avoid Magic Numbers" width="1024" height="768" src="assets/images/slides/82.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/82.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Avoid Magic Numbers</h1>
-                  <p>Next, avoid magic numbers. What am I talking about when I say &quot;magic numbers&quot;?</p>
+                  <p>Is it because it&#39;s in another module?</p>
                 </div>
               </div>
             </section>
@@ -1126,7 +1128,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>You know what this is. We all do it. These &quot;magic numbers&quot; are best to avoid whenever possible. You want your styles to be predictable and flexible, and these &quot;magic numbers&quot; break that. However, when you do use them, which is sometimes unavoidable, make sure to document it.</p>
+                  <p>Abstract up!</p>
                 </div>
               </div>
             </section>
@@ -1138,32 +1140,32 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now I have a way to search across the project and find the magic numbers whenever I do a refactor.</p>
+                  <p>Use something like a grid to handle the structure. The individual module doesn&#39;t need to control its layout; it should flex and fit in any container.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='85'>
-              <div class='grid' id='abstract-structure'>
+              <div class='grid' id='slide-85'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Abstract Structure" width="1024" height="768" src="assets/images/slides/85.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/85.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Abstract Structure</h1>
-                  <p>In addition to magic numbers, layout and positioning in CSS can cause you a lot of headaches when trying to keep your styles flexible. Let&#39;s look at an example.</p>
+                  <p>A higher-level module now handles the structure.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='86'>
-              <div class='grid' id='slide-86'>
+              <div class='grid' id='evolution-of-modular-css'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/86.png" />
+                    <img alt="Evolution of Modular CSS" width="1024" height="768" src="assets/images/slides/86.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>This is all well and good until we have a second <code>.nav</code> block that needs to be positioned to the left, or even centered.</p>
+                  <h1 class='h2'>Evolution of Modular CSS</h1>
+                  <p>We&#39;ve seen a gradual shift in the way that we think about modular CSS, and how our styles should be written. Let&#39;s look at an example.</p>
                 </div>
               </div>
             </section>
@@ -1175,7 +1177,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Ask yourself, why is this navigation block being positioned to the right at <code>50%</code>?</p>
+                  <p>We&#39;ll use the Dribbble shot as an example. How would we have marked this up initially with the advent of &quot;modular&quot; CSS?</p>
                 </div>
               </div>
             </section>
@@ -1187,7 +1189,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Is it because it&#39;s in another module?</p>
+                  <p>Initially, we would have marked this up with a class of <code>shot</code>, and then all of our HTML elements inside.</p>
                 </div>
               </div>
             </section>
@@ -1199,7 +1201,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Abstract up!</p>
+                  <p>We called those elements scoped within the <code>.shot</code> class.</p>
                 </div>
               </div>
             </section>
@@ -1211,7 +1213,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Use something like a grid to handle the structure. The individual module doesn&#39;t need to control its layout; it should flex and fit in any container.</p>
+                  <p>This worked, but we quickly ran into issues when we changed the markup. What happens when that <code>h2</code> turns into an <code>h3</code>?</p>
                 </div>
               </div>
             </section>
@@ -1223,20 +1225,19 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>A higher-level module now handles the structure.</p>
+                  <p>Well, not only do you have to change it in the HTML, but you also have to change it in the CSS.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='92'>
-              <div class='grid' id='evolution-of-modular-css'>
+              <div class='grid' id='slide-92'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Evolution of Modular CSS" width="1024" height="768" src="assets/images/slides/92.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/92.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Evolution of Modular CSS</h1>
-                  <p>We&#39;ve seen a gradual shift in the way that we think about modular CSS, and how our styles should be written. Let&#39;s look at an example.</p>
+                  <p>Ok ok, we&#39;ll scope everything to the <code>.shot</code>!</p>
                 </div>
               </div>
             </section>
@@ -1248,7 +1249,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We&#39;ll use the Dribbble shot as an example. How would we have marked this up initially with the advent of &quot;modular&quot; CSS?</p>
+                  <p>We add a <code>shot-</code> class to everything within the <code>.shot</code>.</p>
                 </div>
               </div>
             </section>
@@ -1260,7 +1261,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Initially, we would have marked this up with a class of <code>shot</code>, and then all of our HTML elements inside.</p>
+                  <p>Now we have hooks to target each of our elements.</p>
                 </div>
               </div>
             </section>
@@ -1272,7 +1273,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We called those elements scoped within the <code>.shot</code> class.</p>
+                  <p>We have another problem. What if we use this same pattern for another element that isn&#39;t a &quot;shot&quot;? The name &quot;shot&quot; doesn&#39;t really make sense for that element, so we need to make it something more abstract.</p>
                 </div>
               </div>
             </section>
@@ -1284,7 +1285,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>This worked, but we quickly ran into issues when we changed the markup. What happens when that <code>h2</code> turns into an <code>h3</code>?</p>
+                  <p>Ok ok, we&#39;ll abstract the name!</p>
                 </div>
               </div>
             </section>
@@ -1292,11 +1293,12 @@
               <div class='grid' id='slide-97'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/97.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/97.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/97-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Well, not only do you have to change it in the HTML, but you also have to change it in the CSS.</p>
+                  <p>Okay, we call it a card; that&#39;s way more abstract, so we&#39;re good, right? Well not quite.</p>
                 </div>
               </div>
             </section>
@@ -1308,7 +1310,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Ok ok, we&#39;ll scope everything to the <code>.shot</code>!</p>
+                  <p>We realize now that our <code>.card-list</code> styles are being duplicated on different lists throughout the site. We need to pull that out. I think you see where this is headed.</p>
                 </div>
               </div>
             </section>
@@ -1316,11 +1318,13 @@
               <div class='grid' id='slide-99'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/99.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/99.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/99-1.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/99-2.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We add a <code>shot-</code> class to everything within the <code>.shot</code>.</p>
+                  <p>We change the <code>.card-list</code> to <code>.list</code>.</p>
                 </div>
               </div>
             </section>
@@ -1328,11 +1332,13 @@
               <div class='grid' id='slide-100'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/100.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/100.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/100-1.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/100-2.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now we have hooks to target each of our elements.</p>
+                  <p>And this keeps happening for all of the elements in the <code>.card</code> until we realize that it&#39;s not a card, it&#39;s a collection of independently created modules that can be used together to create multiple style patterns.</p>
                 </div>
               </div>
             </section>
@@ -1344,19 +1350,20 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We have another problem. What if we use this same pattern for another element that isn&#39;t a &quot;shot&quot;? The name &quot;shot&quot; doesn&#39;t really make sense for that element, so we need to make it something more abstract.</p>
+                  <p>How do we find these patterns?</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='102'>
-              <div class='grid' id='slide-102'>
+              <div class='grid' id='process'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/102.png" />
+                    <img alt="Process" width="1024" height="768" src="assets/images/slides/102.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Ok ok, we&#39;ll abstract the name!</p>
+                  <h1 class='h2'>Process</h1>
+                  <p>By establishing a process.</p>
                 </div>
               </div>
             </section>
@@ -1364,12 +1371,11 @@
               <div class='grid' id='slide-103'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/103.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/103-1.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/103.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Okay, we call it a card; that&#39;s way more abstract, so we&#39;re good, right? Well not quite.</p>
+                  <p>Although amusing, this is not the process.</p>
                 </div>
               </div>
             </section>
@@ -1381,21 +1387,20 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We realize now that our <code>.card-list</code> styles are being duplicated on different lists throughout the site. We need to pull that out. I think you see where this is headed.</p>
+                  <p>I like to break it down into five steps.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='105'>
-              <div class='grid' id='slide-105'>
+              <div class='grid' id='identify'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/105.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/105-1.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/105-2.png" />
+                    <img alt="Identify" width="1024" height="768" src="assets/images/slides/105.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We change the <code>.card-list</code> to <code>.list</code>.</p>
+                  <h1 class='h2'>Identify</h1>
+                  <p>Obviously, the first step is to identify the patterns that you&#39;ll start with when building your modules.</p>
                 </div>
               </div>
             </section>
@@ -1403,38 +1408,39 @@
               <div class='grid' id='slide-106'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/106.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/106-1.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/106-2.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/106.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And this keeps happening for all of the elements in the <code>.card</code> until we realize that it&#39;s not a card, it&#39;s a collection of independently created modules that can be used together to create multiple style patterns.</p>
+                  <p>In order to write the pattern, we need to find the pattern.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='107'>
-              <div class='grid' id='slide-107'>
+              <div class='grid' id='structure--layout'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/107.png" />
+                    <img alt="Structure &amp; Layout" width="1024" height="768" src="assets/images/slides/107.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>How do we find these patterns?</p>
+                  <h1 class='h2'>Structure & Layout</h1>
+                  <p>I like to start at the highest level: the structure and layout elements. These tend to be the most reusable elements project to project.</p>
+                  
+                  <p><em>Let&#39;s take a look at some example patterns to get an idea of the process we take.</em></p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='108'>
-              <div class='grid' id='process'>
+              <div class='grid' id='row'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Process" width="1024" height="768" src="assets/images/slides/108.png" />
+                    <img alt="Row" width="1024" height="768" src="assets/images/slides/108.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Process</h1>
-                  <p>By establishing a process.</p>
+                  <h1 class='h2'>Row</h1>
+                  <p>The first pattern is the <strong>Row</strong>. Freqently on the web, you&#39;ll see these full-width bars, generally with a <code>background-color</code> or image.</p>
                 </div>
               </div>
             </section>
@@ -1446,7 +1452,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Although amusing, this is not the process.</p>
+                  <p>They are a very common layout pattern that we&#39;ll reuse from site to site. You can see it here on <a href="https://about.twitter.com/">Twitter&#39;s About page</a>. They have a few different row variations, or modifiers.</p>
                 </div>
               </div>
             </section>
@@ -1458,20 +1464,19 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>I like to break it down into five steps.</p>
+                  <p>The first row is in the header, and it&#39;s a standard white <code>background</code> with a <code>box-shadow</code>.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='111'>
-              <div class='grid' id='identify'>
+              <div class='grid' id='slide-111'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Identify" width="1024" height="768" src="assets/images/slides/111.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/111.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Identify</h1>
-                  <p>Obviously, the first step is to identify the patterns that you&#39;ll start with when building your modules.</p>
+                  <p>The next row is a light grey <code>background</code> with a <code>box-shadow</code>.</p>
                 </div>
               </div>
             </section>
@@ -1483,47 +1488,48 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>In order to write the pattern, we need to find the pattern.</p>
+                  <p>Then we have a more complex row with a <code>background-image</code> on it.</p>
+                  
+                  <p><em>There isn&#39;t much to the pattern, and it&#39;s easily reusable across your projects.</em></p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='113'>
-              <div class='grid' id='structure--layout'>
+              <div class='grid' id='cell'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Structure &amp; Layout" width="1024" height="768" src="assets/images/slides/113.png" />
+                    <img alt="Cell" width="1024" height="768" src="assets/images/slides/113.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Structure & Layout</h1>
-                  <p>I like to start at the highest level: the structure and layout elements. These tend to be the most reusable elements project to project.</p>
-                  
-                  <p><em>Let&#39;s take a look at some example patterns to get an idea of the process we take.</em></p>
+                  <h1 class='h2'>Cell</h1>
+                  <p>Virtually all sites have some container or wrapper that keeps the content contained. We call this a <strong>Cell</strong>.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='114'>
-              <div class='grid' id='row'>
+              <div class='grid' id='slide-114'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Row" width="1024" height="768" src="assets/images/slides/114.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/114.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/114-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Row</h1>
-                  <p>The first pattern is the <strong>Row</strong>. Freqently on the web, you&#39;ll see these full-width bars, generally with a <code>background-color</code> or image.</p>
+                  <p>On <a href="http://owltastic.com/">Meagan Fisher&#39;s site</a>, she has her content contained within a set width so that things line up nicely.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='115'>
-              <div class='grid' id='slide-115'>
+              <div class='grid' id='well'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/115.png" />
+                    <img alt="Well" width="1024" height="768" src="assets/images/slides/115.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>They are a very common layout pattern that we&#39;ll reuse from site to site. You can see it here on <a href="https://about.twitter.com/">Twitter&#39;s About page</a>. They have a few different row variations, or modifiers.</p>
+                  <h1 class='h2'>Well</h1>
+                  <p>The <strong>Well</strong> handles the vertical spacing on the top and bottom, and it generally resides within a row.</p>
                 </div>
               </div>
             </section>
@@ -1531,11 +1537,12 @@
               <div class='grid' id='slide-116'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/116.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/116.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/116-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>The first row is in the header, and it&#39;s a standard white <code>background</code> with a <code>box-shadow</code>.</p>
+                  <p>Again, on Meagan Fisher&#39;s site, you can see that there is some set spacing at the top and bottom of each row, and alongside each cell that is handling the width limiting.</p>
                 </div>
               </div>
             </section>
@@ -1543,38 +1550,38 @@
               <div class='grid' id='slide-117'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/117.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/117.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/117-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>The next row is a light grey <code>background</code> with a <code>box-shadow</code>.</p>
+                  <p>The cell and well are used in conjunction with one another, and you can specify modifiers to your well that will handle various vertical margins.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='118'>
-              <div class='grid' id='slide-118'>
+              <div class='grid' id='grids'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/118.png" />
+                    <img alt="Grids" width="1024" height="768" src="assets/images/slides/118.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Then we have a more complex row with a <code>background-image</code> on it.</p>
-                  
-                  <p><em>There isn&#39;t much to the pattern, and it&#39;s easily reusable across your projects.</em></p>
+                  <h1 class='h2'>Grids</h1>
+                  <p>We&#39;re all familiar with <strong>Grids</strong>. They&#39;ve existed for a long time on the web, and they are a very common and clear pattern to identify.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='119'>
-              <div class='grid' id='cell'>
+              <div class='grid' id='slide-119'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Cell" width="1024" height="768" src="assets/images/slides/119.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/119.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/119-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Cell</h1>
-                  <p>Virtually all sites have some container or wrapper that keeps the content contained. We call this a <strong>Cell</strong>.</p>
+                  <p>On the <a href="http://guides.github.com">GitHub Guides</a> page, we can see that they have each &quot;guide&quot; split into a <code>50/50</code> grid.</p>
                 </div>
               </div>
             </section>
@@ -1587,33 +1594,33 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>On <a href="http://owltastic.com/">Meagan Fisher&#39;s site</a>, she has her content contained within a set width so that things line up nicely.</p>
+                  <p>And on the <a href="http://github.com/drewbarontini">GitHub user profile</a> page, we can see that they have a lot of different grids, including grids inside of grids.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='121'>
-              <div class='grid' id='well'>
+              <div class='grid' id='common-patterns'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Well" width="1024" height="768" src="assets/images/slides/121.png" />
+                    <img alt="Common Patterns" width="1024" height="768" src="assets/images/slides/121.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Well</h1>
-                  <p>The <strong>Well</strong> handles the vertical spacing on the top and bottom, and it generally resides within a row.</p>
+                  <h1 class='h2'>Common Patterns</h1>
+                  <p>Next, look for the common patterns that you continually encounter and build for each project.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='122'>
-              <div class='grid' id='slide-122'>
+              <div class='grid' id='bucket'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/122.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/122-1.png" />
+                    <img alt="Bucket" width="1024" height="768" src="assets/images/slides/122.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Again, on Meagan Fisher&#39;s site, you can see that there is some set spacing at the top and bottom of each row, and alongside each cell that is handling the width limiting.</p>
+                  <h1 class='h2'>Bucket</h1>
+                  <p>The media object is the cornerstone example of OOCSS, and it&#39;s another very common layout pattern that you can use on most projects. If you aren&#39;t familiar with the pattern, it&#39;s a media element with content next to it. We call it the <strong>Bucket</strong>.</p>
                 </div>
               </div>
             </section>
@@ -1626,33 +1633,33 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>The cell and well are used in conjunction with one another, and you can specify modifiers to your well that will handle various vertical margins.</p>
+                  <p>A comment on Dribbble would be an example of a bucket. It has a media element with content floated next to it.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='124'>
-              <div class='grid' id='grids'>
+              <div class='grid' id='slide-124'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Grids" width="1024" height="768" src="assets/images/slides/124.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/124.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/124-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Grids</h1>
-                  <p>We&#39;re all familiar with <strong>Grids</strong>. They&#39;ve existed for a long time on the web, and they are a very common and clear pattern to identify.</p>
+                  <p>Also, on the Dribbble profile pages, there&#39;s another bucket.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='125'>
-              <div class='grid' id='slide-125'>
+              <div class='grid' id='card'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/125.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/125-1.png" />
+                    <img alt="Card" width="1024" height="768" src="assets/images/slides/125.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>On the <a href="http://guides.github.com">GitHub Guides</a> page, we can see that they have each &quot;guide&quot; split into a <code>50/50</code> grid.</p>
+                  <h1 class='h2'>Card</h1>
+                  <p><strong>Cards</strong> are stylistic containers for content that generally have some <code>background-color</code>, a <code>border-radius</code>, a <code>box-shadow</code> or <code>border</code>, and some <code>padding</code>.</p>
                 </div>
               </div>
             </section>
@@ -1665,93 +1672,15 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And on the <a href="http://github.com/drewbarontini">GitHub user profile</a> page, we can see that they have a lot of different grids, including grids inside of grids.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='127'>
-              <div class='grid' id='common-patterns'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="Common Patterns" width="1024" height="768" src="assets/images/slides/127.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Common Patterns</h1>
-                  <p>Next, look for the common patterns that you continually encounter and build for each project.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='128'>
-              <div class='grid' id='bucket'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="Bucket" width="1024" height="768" src="assets/images/slides/128.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Bucket</h1>
-                  <p>The media object is the cornerstone example of OOCSS, and it&#39;s another very common layout pattern that you can use on most projects. If you aren&#39;t familiar with the pattern, it&#39;s a media element with content next to it. We call it the <strong>Bucket</strong>.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='129'>
-              <div class='grid' id='slide-129'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/129.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/129-1.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>A comment on Dribbble would be an example of a bucket. It has a media element with content floated next to it.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='130'>
-              <div class='grid' id='slide-130'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/130.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/130-1.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>Also, on the Dribbble profile pages, there&#39;s another bucket.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='131'>
-              <div class='grid' id='card'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="Card" width="1024" height="768" src="assets/images/slides/131.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Card</h1>
-                  <p><strong>Cards</strong> are stylistic containers for content that generally have some <code>background-color</code>, a <code>border-radius</code>, a <code>box-shadow</code> or <code>border</code>, and some <code>padding</code>.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='132'>
-              <div class='grid' id='slide-132'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/132.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/132-1.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
                   <p>Here, this is what I’d call a card on Dribbble:</p>
                 </div>
               </div>
             </section>
-            <section class='bdrb mbl pbl' data-id='133'>
+            <section class='bdrb mbl pbl' data-id='127'>
               <div class='grid' id='lists'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Lists" width="1024" height="768" src="assets/images/slides/133.png" />
+                    <img alt="Lists" width="1024" height="768" src="assets/images/slides/127.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
@@ -1762,16 +1691,95 @@
                 </div>
               </div>
             </section>
-            <section class='bdrb mbl pbl' data-id='134'>
-              <div class='grid' id='slide-134'>
+            <section class='bdrb mbl pbl' data-id='128'>
+              <div class='grid' id='slide-128'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/134.png" />
-                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/134-1.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/128.png" />
+                    <img alt="" class="mbs" width="1024" height="768" src="assets/images/slides/128-1.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>Here, on the <a href="http://news.layervault.com/">Designer News</a> site, we have a ton of different lists.</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='129'>
+              <div class='grid' id='slide-129'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="" width="1024" height="768" src="assets/images/slides/129.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <p>Finally, find the more unique patterns. Do you notice very specific style patterns?</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='130'>
+              <div class='grid' id='front-end-audit'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/130.png" />
+                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/130-1.png" />
+                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/130-2.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <h1 class='h2'>Front-end Audit</h1>
+                  <p>To help you document these, you can use what I call the &quot;Front-end Audit.&quot; It&#39;s simply a document that you can use to outline and explain all of the components of your front-end architecture, among other things.</p>
+                  
+                  <p>You can find this on my GitHub.</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='131'>
+              <div class='grid' id='define'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="Define" width="1024" height="768" src="assets/images/slides/131.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <h1 class='h2'>Define</h1>
+                  <p>After you&#39;ve identified the pattern(s), you need to define them. This is always the fun part in the front-end world. Naming is tricky, and you want to give it a meaningful name that isn&#39;t overly specific.</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='132'>
+              <div class='grid' id='responsibility'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="Responsibility" width="1024" height="768" src="assets/images/slides/132.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <h1 class='h2'>Responsibility</h1>
+                  <p>First, though, determine what the responsibility of the module is. That will help dictate the name of the module.</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='133'>
+              <div class='grid' id='slide-133'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="" width="1024" height="768" src="assets/images/slides/133.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <p>For example, this module handles the video player.</p>
+                </div>
+              </div>
+            </section>
+            <section class='bdrb mbl pbl' data-id='134'>
+              <div class='grid' id='slide-134'>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <div class='mbmbfm--desk'>
+                    <img alt="" width="1024" height="768" src="assets/images/slides/134.png" />
+                  </div>
+                </div>
+                <div class='grid-box grid-box--desk--1of2'>
+                  <p>Now that its responsibility is determined, we can easily name the class.</p>
                 </div>
               </div>
             </section>
@@ -1783,62 +1791,57 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Finally, find the more unique patterns. Do you notice very specific style patterns?</p>
+                  <p>And any modifiers.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='136'>
-              <div class='grid' id='front-end-audit'>
+              <div class='grid' id='slide-136'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/136.png" />
-                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/136-1.png" />
-                    <img alt="Front-end Audit" class="mbs" width="1024" height="768" src="assets/images/slides/136-2.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/136.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Front-end Audit</h1>
-                  <p>To help you document these, you can use what I call the &quot;Front-end Audit.&quot; It&#39;s simply a document that you can use to outline and explain all of the components of your front-end architecture, among other things.</p>
-                  
-                  <p>You can find this on my GitHub.</p>
+                  <p>Or submodules.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='137'>
-              <div class='grid' id='define'>
+              <div class='grid' id='build'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Define" width="1024" height="768" src="assets/images/slides/137.png" />
+                    <img alt="Build" width="1024" height="768" src="assets/images/slides/137.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Define</h1>
-                  <p>After you&#39;ve identified the pattern(s), you need to define them. This is always the fun part in the front-end world. Naming is tricky, and you want to give it a meaningful name that isn&#39;t overly specific.</p>
+                  <h1 class='h2'>Build</h1>
+                  <p>Now that the pattern is identified and defined, you can build the module.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='138'>
-              <div class='grid' id='responsibility'>
+              <div class='grid' id='slide-138'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Responsibility" width="1024" height="768" src="assets/images/slides/138.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/138.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Responsibility</h1>
-                  <p>First, though, determine what the responsibility of the module is. That will help dictate the name of the module.</p>
+                  <p>We write out our styling for the module.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='139'>
-              <div class='grid' id='slide-139'>
+              <div class='grid' id='combine'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/139.png" />
+                    <img alt="Combine" width="1024" height="768" src="assets/images/slides/139.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>For example, this module handles the video player.</p>
+                  <h1 class='h2'>Combine</h1>
+                  <p>With your module built, you will want to combine it with other modules that you have created.</p>
                 </div>
               </div>
             </section>
@@ -1850,7 +1853,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now that its responsibility is determined, we can easily name the class.</p>
+                  <p>For example, your layout patterns — <code>row</code>, <code>cell</code>, and <code>grid</code>, will be used in conjuntion with one another to lay out the page.</p>
                 </div>
               </div>
             </section>
@@ -1862,7 +1865,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And any modifiers.</p>
+                  <p>The goal of a flexible CSS architecture is to have separate, encapsulated modules that can work together and be mixed and matched to create various styles.</p>
                 </div>
               </div>
             </section>
@@ -1874,20 +1877,20 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Or submodules.</p>
+                  <p>As you can see here, we&#39;re using our card (stylistic container) alongside our video module (video player) to add a nice little style to our video player.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='143'>
-              <div class='grid' id='build'>
+              <div class='grid' id='refine'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Build" width="1024" height="768" src="assets/images/slides/143.png" />
+                    <img alt="Refine" width="1024" height="768" src="assets/images/slides/143.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Build</h1>
-                  <p>Now that the pattern is identified and defined, you can build the module.</p>
+                  <h1 class='h2'>Refine</h1>
+                  <p>With all of your modules now working together, you&#39;ll want to refine, or refactor, as necessary.</p>
                 </div>
               </div>
             </section>
@@ -1899,20 +1902,19 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We write out our styling for the module.</p>
+                  <p>You&#39;re never going to write something perfect the first time (most likely).</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='145'>
-              <div class='grid' id='combine'>
+              <div class='grid' id='slide-145'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Combine" width="1024" height="768" src="assets/images/slides/145.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/145.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Combine</h1>
-                  <p>With your module built, you will want to combine it with other modules that you have created.</p>
+                  <p>Be sure to constantly evaluate and refactor your CSS code.</p>
                 </div>
               </div>
             </section>
@@ -1924,7 +1926,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>For example, your layout patterns — <code>row</code>, <code>cell</code>, and <code>grid</code>, will be used in conjuntion with one another to lay out the page.</p>
+                  <p>Don&#39;t be afraid to write something specifically, and abstract as you build out the site. Frequently, we&#39;re building sites in an unpredictable manner, so we&#39;ll have to change the structure are we build out the system.</p>
                 </div>
               </div>
             </section>
@@ -1936,7 +1938,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>The goal of a flexible CSS architecture is to have separate, encapsulated modules that can work together and be mixed and matched to create various styles.</p>
+                  <p>Find weaknesses in your code!</p>
                 </div>
               </div>
             </section>
@@ -1948,20 +1950,19 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>As you can see here, we&#39;re using our card (stylistic container) alongside our video module (video player) to add a nice little style to our video player.</p>
+                  <p>Look for the magic numbers! See if you can remove them and make your styles more predicatable.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='149'>
-              <div class='grid' id='refine'>
+              <div class='grid' id='slide-149'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Refine" width="1024" height="768" src="assets/images/slides/149.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/149.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Refine</h1>
-                  <p>With all of your modules now working together, you&#39;ll want to refine, or refactor, as necessary.</p>
+                  <p>Are you setting fixed widths on non-layout modules? You want your modules to flex to fit any container, and this is an easy way to spot places you need to refactor. Are you forcing <code>absolute</code> or <code>fixed</code> positioning on elements that shouldn&#39;t have it?</p>
                 </div>
               </div>
             </section>
@@ -1973,7 +1974,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>You&#39;re never going to write something perfect the first time (most likely).</p>
+                  <p>If you find yourself unsetting a lot of styles, you might want to consider a refactor. Your base module is doing too much.</p>
                 </div>
               </div>
             </section>
@@ -1985,87 +1986,15 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Be sure to constantly evaluate and refactor your CSS code.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='152'>
-              <div class='grid' id='slide-152'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/152.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>Don&#39;t be afraid to write something specifically, and abstract as you build out the site. Frequently, we&#39;re building sites in an unpredictable manner, so we&#39;ll have to change the structure are we build out the system.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='153'>
-              <div class='grid' id='slide-153'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/153.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>Find weaknesses in your code!</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='154'>
-              <div class='grid' id='slide-154'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/154.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>Look for the magic numbers! See if you can remove them and make your styles more predicatable.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='155'>
-              <div class='grid' id='slide-155'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/155.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>Are you setting fixed widths on non-layout modules? You want your modules to flex to fit any container, and this is an easy way to spot places you need to refactor. Are you forcing <code>absolute</code> or <code>fixed</code> positioning on elements that shouldn&#39;t have it?</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='156'>
-              <div class='grid' id='slide-156'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/156.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <p>If you find yourself unsetting a lot of styles, you might want to consider a refactor. Your base module is doing too much.</p>
-                </div>
-              </div>
-            </section>
-            <section class='bdrb mbl pbl' data-id='157'>
-              <div class='grid' id='slide-157'>
-                <div class='grid-box grid-box--desk--1of2'>
-                  <div class='mbmbfm--desk'>
-                    <img alt="" width="1024" height="768" src="assets/images/slides/157.png" />
-                  </div>
-                </div>
-                <div class='grid-box grid-box--desk--1of2'>
                   <p>Use tools like <a href="https://github.com/zmoazeni/csscss">csscss</a>, <a href="https://github.com/CSSLint/csslint">csslint</a>, and <a href="https://github.com/t32k/stylestats">Style Stats</a> to help you spot repetition of your code. Use things like <code>@extend</code> in Sass, or abstract out shared styles to another module.</p>
                 </div>
               </div>
             </section>
-            <section class='bdrb mbl pbl' data-id='158'>
+            <section class='bdrb mbl pbl' data-id='152'>
               <div class='grid' id='examples'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Examples" width="1024" height="768" src="assets/images/slides/158.png" />
+                    <img alt="Examples" width="1024" height="768" src="assets/images/slides/152.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
