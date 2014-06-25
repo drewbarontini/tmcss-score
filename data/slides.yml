@@ -118,11 +118,9 @@
     We've made a shift from thinking of our styling in terms of pages to
     styling in terms of components (patterns, modules).
 
-
+- description: >
     Instead of looking at a page and defining it as its whole, we now need to
     look at all the various modules that make up the page.
-  additional_images: true
-  additional_images_number: 1
 
 - description: >
     Dave Rupert says it best when he says that we should focus on creating
@@ -132,12 +130,13 @@
     This page isn't the "Home Page" of [ted.com](http://ted.com).
 
 - description: >
-    It's a collection of front-end modules that create reusable style patterns.
+    It's a complex page fit together with front-end modules.
+
+- description: >
+    **It's a collection of resusable style patterns.**
 
 
     Modular design is the principle that we use to get there.
-  additional_images: true
-  additional_images_number: 1
 
 - title: Modular Design
   description: >
@@ -162,10 +161,11 @@
     maintainable code. Let's look at an example.
 
 - description: >
-    We have a thumb module, which applies a small set of extendable styles for
-    handling thumbnails, such as circle avatars.
-  additional_images: true
-  additional_images_number: 1
+    We have a thumb module for handling thumbnails, and, in this instance,
+    circle avatars by setting a `border-radius` of `50%`.
+
+- description: >
+    This module applies a small set of extendable styles.
 
 - title: Single Responsibility Principle
   description: >
@@ -204,21 +204,22 @@
 
 - description: >
     In our newest course interface at Code School, we have this bar at the
-    bottom of the interface, which we call the omnibar.
-  additional_images: true
-  additional_images_number: 1
+    bottom of the interface.
+
+- description: >
+    We call it the omnibar.
 
 - description: >
     In the omnibar, there is a button on the far right.
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
+    The button is positioned absolutely to the right side of the omnibar.
 
 - description: >
     And here is the markup for the button.
 
 
-    Now, we want this button to be positioned absolutely to the bottom right.
-    So how could we go about this?
+    How would we go about positioning this button correctly?
 
 - description: >
     We could just target the `.btn` and position it.
@@ -271,8 +272,9 @@
 
 - description: >
     This may seem redundant, but we want to call `.table`, not `table`.
-  additional_images: true
-  additional_images_number: 2
+
+- description: >
+- description: >
 
 - title: Establish Naming Conventions
   description: >
@@ -369,9 +371,10 @@
 
 - title: Submodules
   description: >
+    The next naming convention covers **Submodules**.
+
+- description: >
     **Submodules** are elements that are scoped to a parent module.
-  additional_images: true
-  additional_images_number: 1
 
 - description: >
     For example, earlier we had `.omnibar-btn`, which was a submodule class.
@@ -391,21 +394,6 @@
     Make sure you look at all these methodologies, as one might fit your way of
     working the best. They are also great starting points to building your own
     system.
-
-- title: Avoid Magic Numbers
-  description: >
-    Next, avoid magic numbers. What am I talking about when I say "magic
-    numbers"?
-
-- description: >
-    You know what this is. We all do it. These "magic numbers" are best to
-    avoid whenever possible. You want your styles to be predictable and
-    flexible, and these "magic numbers" break that. However, when you do use
-    them, which is sometimes unavoidable, make sure to document it.
-
-- description: >
-    Now I have a way to search across the project and find the magic numbers
-    whenever I do a refactor.
 
 - title: Abstract Structure
   description: >
@@ -435,6 +423,21 @@
 - description: >
     A higher-level module now handles the structure.
 
+- title: Avoid Magic Numbers
+  description: >
+    Next, avoid magic numbers. What am I talking about when I say "magic
+    numbers"?
+
+- description: >
+    You know what this is. We all do it. These "magic numbers" are best to
+    avoid whenever possible. You want your styles to be predictable and
+    flexible, and these "magic numbers" break that. However, when you do use
+    them, which is sometimes unavoidable, make sure to document it.
+
+- description: >
+    Now I have a way to search across the project and find the magic numbers
+    whenever I do a refactor.
+
 - title: Evolution of Modular CSS
   description: >
     We've seen a gradual shift in the way that we think about modular CSS, and
@@ -463,10 +466,8 @@
     Ok ok, we'll scope everything to the `.shot`!
 
 - description: >
-    We add a `shot-` class to everything within the `.shot`.
-
-- description: >
-    Now we have hooks to target each of our elements.
+    We add a `shot-` class to everything within the `.shot`, and now we have
+    hooks to target each of our elements.
 
 - description: >
     We have another problem. What if we use this same pattern for another
@@ -479,8 +480,6 @@
 - description: >
     Okay, we call it a card; that's way more abstract, so we're good, right?
     Well not quite.
-  additional_images: true
-  additional_images_number: 1
 
 - description: >
     We realize now that our `.card-list` styles are being duplicated on
@@ -489,15 +488,20 @@
 
 - description: >
     We change the `.card-list` to `.list`.
-  additional_images: true
-  additional_images_number: 2
+
+- description: >
+    Now we have our `.card` styles and our `.list` styles separate.
 
 - description: >
     And this keeps happening for all of the elements in the `.card` until we
-    realize that it's not a card, it's a collection of independently created
-    modules that can be used together to create multiple style patterns.
-  additional_images: true
-  additional_images_number: 2
+    have realize that it's not just a `shot` or a `card`.
+
+- description: >
+    It's several modules working together to build the pattern.
+
+- description: >
+    It's a collection of independently created modules that can be used
+    together to create multiple style patterns.
 
 - description: >
     How do we find these patterns?
@@ -561,26 +565,27 @@
 - description: >
     On [Meagan Fisher's site](http://owltastic.com/), she has her content
     contained within a set width so that things line up nicely.
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
 
 - title: Well
   description: >
-    The **Well** handles the vertical spacing on the top and bottom, and it
-    generally resides within a row.
+    We call this pattern the **Well**, and it handles the vertical spacing on
+    the top and bottom, and it generally resides within a row.
 
 - description: >
     Again, on Meagan Fisher's site, you can see that there is some set spacing
     at the top and bottom of each row, and alongside each cell that is handling
     the width limiting.
-  additional_images: true
-  additional_images_number: 1
 
 - description: >
-    The cell and well are used in conjunction with one another, and you can
-    specify modifiers to your well that will handle various vertical margins.
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
+    The cell and well are used in conjunction with one another.
+
+- description: >
+    And you can specify modifiers to your well that will handle various
+    vertical margins, like this `--l`, or **large** modifier.
 
 - title: Grids
   description: >
@@ -590,20 +595,15 @@
 - description: >
     On the [GitHub Guides](http://guides.github.com) page, we can see that they
     have each "guide" split into a `50/50` grid.
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
 
 - description: >
     And on the [GitHub user profile](http://github.com/drewbarontini) page, we
     can see that they have a lot of different grids, including grids inside of
     grids.
-  additional_images: true
-  additional_images_number: 1
 
-- title: Common Patterns
-  description: >
-    Next, look for the common patterns that you continually encounter and build
-    for each project.
+- description: >
 
 - title: Bucket
   description: >
@@ -613,15 +613,21 @@
     **Bucket**.
 
 - description: >
-    A comment on Dribbble would be an example of a bucket. It has a media element
-    with content floated next to it.
-  additional_images: true
-  additional_images_number: 1
+    A comment on Dribbble would be an example of a bucket.
+
+- description: >
+    It has a media element with content floated next to it.
 
 - description: >
     Also, on the Dribbble profile pages, there's another bucket.
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
+    Again, it has a media element with content floated next to it.
+
+- title: Common Patterns
+  description: >
+    Next, look for the common patterns that you continually encounter and build
+    for each project.
 
 - title: Card
   description: >
@@ -631,8 +637,8 @@
 
 - description: >
     Here, this is what I’d call a card on Dribbble:
-  additional_images: true
-  additional_images_number: 1
+
+- description: >
 
 - title: Lists
   description: >
@@ -647,24 +653,32 @@
 
 - description: >
     Here, on the [Designer News](http://news.layervault.com/) site, we have a
-    ton of different lists.
-  additional_images: true
-  additional_images_number: 1
+    variety of different lists.
 
 - description: >
+
+- title: Unique Patterns
+  description: >
     Finally, find the more unique patterns. Do you notice very specific style
     patterns?
+
+- description: >
+    Again on Dribbble, we can see an example of a more unique pattern.
+
+- description: >
+    Each shot page has a color list of colors contained within a shot. This is
+    a type of list, but it's a more specific pattern to this particular site.
 
 - title: Front-end Audit
   description: >
     To help you document these, you can use what I call the "Front-end Audit."
+
+- description: >
     It's simply a document that you can use to outline and explain all of the
     components of your front-end architecture, among other things.
 
-
+- description: >
     You can find this on my GitHub.
-  additional_images: true
-  additional_images_number: 2
 
 - title: Define
   description: >
@@ -702,13 +716,13 @@
     you have created.
 
 - description: >
-    For example, your layout patterns — `row`, `cell`, and `grid`, will be
-    used in conjuntion with one another to lay out the page.
-
-- description: >
     The goal of a flexible CSS architecture is to have separate, encapsulated
     modules that can work together and be mixed and matched to create various
     styles.
+
+- description: >
+    For example, your layout patterns — `row`, `cell`, and `grid`, will be
+    used in conjuntion with one another to lay out the page.
 
 - description: >
     As you can see here, we're using our card (stylistic container) alongside
@@ -749,6 +763,12 @@
     a refactor. Your base module is doing too much.
 
 - description: >
+    Are you repeating styles?
+
+- description: >
+    If so, use a comma-delimited list of selectors for the shared styling.
+
+- description: >
     Use tools like [csscss](https://github.com/zmoazeni/csscss),
     [csslint](https://github.com/CSSLint/csslint), and [Style
     Stats](https://github.com/t32k/stylestats) to help you spot repetition of
@@ -760,3 +780,15 @@
     Now that we've defined "Modular CSS" and talked about the process of
     discovering and writing patterns, let's take that knowledge and walk
     through some real sites and determine how we'd structure our CSS.
+
+- title: Dribbble
+  description: >
+    We've seen a lot of examples from it, so now we're going to go through the
+    process we just talked about, using Dribbble as an example.
+
+- description: >
+    We're going to focus on the front page when you're signed in.
+
+- description: >
+    We have our header, a list of shots, a bottom content section, and the
+    site-wide footer.
