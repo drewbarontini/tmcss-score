@@ -792,3 +792,318 @@
 - description: >
     We have our header, a list of shots, a bottom content section, and the
     site-wide footer.
+
+- title: Structure & Layout
+  description: >
+    As we talked about before, we'll start at the highest level, the structure
+    and layout.
+
+- description: >
+    Looking at the main page...
+
+- description: >
+    We can see there is a full-width bar of color in our header.
+
+- description: >
+    There's also a row of content for our list of shots.
+
+- description: >
+    And, in the footer...
+
+- description: >
+    A row of content for the bottom section of the main content area.
+
+- description: >
+    And a full-width, white background row of content for the site-wide footer.
+
+- description: >
+    You'll remember that we called this pattern a **Row**.
+
+- description: >
+    So with the pattern *identified*, we *define* the responsibility and name,
+    and then **build** our base module, as well as our modifier classes for the
+    alternate background colors.
+
+
+    The `--a` and `--b` modifier classes are used to indicate hierarchy, since
+    I want the dark grey row to be the primary row, and the white background to
+    be the secondary row.
+
+- description: >
+    Alright, now let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that the content is nicely confined within a set width.
+
+- description: >
+    That same width extends all the way down the site.
+
+- description: >
+
+- title: Cell
+  description: >
+    We use the **Cell** pattern for this, which will handle the width limiting.
+
+- description: >
+    With the pattern identified, we define the responsibility and name,
+    and then build the module.
+
+
+    In this case, we just need a single `.cell` class to handle the single
+    `width` of the site.
+
+- description: >
+    Let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that there is spacing in between each "row" of content.
+
+- description: >
+    And looking at the bottom of the site...
+
+- description: >
+    We can see this pattern carry through.
+
+- description: >
+    We use the **Well** pattern to manage the vertical spacing on the "rows" of
+    content.
+
+- description: >
+    We define the responsibility and name, and then build the module.
+
+
+    Here, we're setting the base `.well` module, as well as a large (`--l`)
+    modifier class to add increased spacing, where necessary.
+
+- description: >
+    Let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that we need to arrange a lot of elements on a grid
+    of some sort.
+
+- description: >
+    And looking at the bottom of the site...
+
+- description: >
+    We can see that we have various grids to arrange the content.
+
+- title: Grid
+  description: >
+    Clearly, we'll use a **Grid** to manage the grid-based element arrangement.
+
+- description: >
+    We define the responsibility and name, and then build the module.
+
+- description: >
+    With these four modules built, we have a nice foundation for the layout
+    of this page, as well as all future pages. Also, we can see here that we
+    built our modules independently, so it's easy to combine them, like the
+    `.cell` and `.well`, which will each handle their single responsibility
+    without knowing about one another.
+
+- title: Common Patterns
+  description: >
+    Alright, now let's look for those **Common Patterns**.
+
+- description: >
+    Looking at the site...
+
+- title: List
+  description: >
+    We can see there are several **Lists** throughout the site.
+
+
+    - The header has two separate lists
+
+    - There is an inline list of navigational links at the top of the main content area
+
+    - There are lists of metadata in each shot
+
+- description: >
+    And looking at the bottom of the site...
+
+- description: >
+    - There is a list of blog posts
+
+    - Block-level lists of links in the footer
+
+    - A list of social icons in the footer
+
+- description: >
+    Obviously, we'll use a **List** module.
+
+- description: >
+    Generally, I like to limit my **List** module to handling text-only lists.
+    However, I've recently added the "object" list, which does a `display: block`
+    and `float: left`, and this is for those non-text items that can still easily
+    be managed by the **List** module.
+
+- description: >
+    With the pattern identified, we can build the module.
+
+    Here, we're defining out base module, which will be `block` by
+    default-since it's the most common occurrence-and then `inline` and
+    `object` modifiers.
+
+- description: >
+    Alright, let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that we have user avatars all over the place, and they are
+    indeed circle avatars.
+
+- title: Thumb
+  description: >
+    Let's build a **Thumb** module to handle this pattern.
+
+- description: >
+    We create our `.thumb` class, and now have a small, extendable pattern to
+    add to any of our `img` tags.
+
+- description: >
+    Alright, let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that we have a lot of icons used throughout the site.
+
+- description: >
+    And in the footer area, there are some additional icons we'll need to
+    manage.
+
+- description: >
+
+- title: Icon
+  description: >
+    Clearly, we'll create an **Icon** module to handle this for us. We could
+    get into a long discussion on the **how** of managing icons on a site, but
+    that's not the important part here.
+
+- description: >
+    So with the pattern identified, we can then build it.
+
+- description: >
+    Let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that we have a search bar in the header and, although we could
+    just manage this as a submodule, we want to plan ahead and build out a more
+    robust module for future forms that we may have on the site.
+
+- title: Form
+  description: >
+    So with the pattern and responsibility identified, we can build a **Form**
+    module.
+
+- description: >
+    We have our base `.form` module, and then the `.form-input` submodule for
+    this search input. Now, since we have the search icon within the input,
+    we'll want to create a `.form-input--search` modifier to handle those
+    styles.
+
+- description: >
+    Alright, let's look for the next **Common Pattern**.
+
+- description: >
+    As we identified earlier, we have these stylistic containers around each
+    shot, which have a white `background`, a `box-shadow`, a `border-radius`,
+    and some `padding`.
+
+- title: Card
+  description: >
+    We call this pattern a **Card**. It's responsibility is to handle the
+    site-wide stylistic containers.
+
+- description: >
+    With the pattern identified, we can then build it.
+
+- description: >
+    Let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that, under each shot, there is an author image, or media
+    element, with their name, or content, floated next to it.
+
+- description: >
+    In the footer...
+
+- description: >
+    We can see the same pattern for a few different elements.
+
+
+    - The 'Equipment Shop' blurb
+
+    - The ad
+
+    - The number of pixels dribbble infographic
+
+- description: >
+    For this, we'll use the **Bucket**, also known as the media object.
+
+- description: >
+    With the pattern identified, we can build it out.
+
+- title: Unique Patterns
+  description: >
+    With the **Common Patterns** defined, we can now look for the more **Unique
+    Patterns**. Are there any patterns that are unique to this site?
+
+- description: >
+    Although I can't really see any unique, or site-specific, patterns, we
+    might want to build a `.header` module to handle the site-wide header for
+    things like vertically aligning the navigational elements.
+
+
+    However, we might also just build a module to handle vertically aligning
+    elements, so we wouldn't need the `.header` module. This is more of an
+    implementation detail.
+
+- description: >
+    After completing this process, we can see that our front-end audit for the
+    CSS architecture looks something like this.
+
+
+    This may seem like a large amount of modules for a single page, but
+    remember, **they are very small, extendable modules, and they will lay the
+    foundation for the rest of the site.**
+
+- description: >
+    I really wish I had the time to go through each module's code individually,
+    but that's not the real purpose here, and the CSS is really simple.
+    However, the code is up on [GitHub](http://go.drewb.io/tmcss-examples) for
+    you to look at.
+
+- title: Digg
+  description: >
+    Now, let's look at a completely different site to see how the process
+    compares.
+
+
+    We'll use [Digg](http://digg.com), which is a site that aggregates popular
+    news stories and videos.
+
+- description: >
+    First, we'll get a lay-of-the-land. We can see that we have a header, list
+    of articles.
+
+- description: >
+    A section for the most popular videos, as well as a few different story
+    lists.
+
+- description: >
+    And, at the bottom, we have a fairly standard site-wide footer.
+
+- title: Structure & Layout
+  description: >
+    Okay, let's start with the **Structure & Layout**.
+
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
+- description: >
