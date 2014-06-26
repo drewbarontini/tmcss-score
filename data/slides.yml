@@ -1098,12 +1098,264 @@
     Okay, let's start with the **Structure & Layout**.
 
 - description: >
+    Looking at the site, we can identify a similar pattern that we've seen
+    before.
+
 - description: >
+    There is a solid white background and `box-shadow` on our header.
+
 - description: >
+    Then there's a section of content for our stories.
+
 - description: >
+    In the middle of the page...
+
 - description: >
+    We can see a section with a fancier background for the most popular videos.
+
 - description: >
+    Next, we have another section for our most popular and upcoming stories.
+
 - description: >
+    And in the footer...
+
 - description: >
+    We have another solid background color for that section.
+
+- title: Row
+  description: >
+    For this, we'll use the **Row** module to manage these sections.
+
 - description: >
+    - We build out our base `.row`
+
+    - Two modifiers (`--a`, `--b`) for hierarchical header/footer rows, so the
+      white background and shadow, and then the medium grey footer background.
+
+    - And then a `highlight` modifier for that upcoming videos row, since I
+      don't want to classify that as a hierarchical thing. However, that might
+      change as we build out the site.
+
 - description: >
+    Alright, now let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that our header area constrains the content to a width.
+
+- description: >
+    This also happens for our main content, but it's a smaller width.
+
+- description: >
+    In the middle of the page...
+
+- description: >
+    That width constraint carries through.
+
+- description: >
+    And at the bottom of the page...
+
+- description: >
+    We have that same width constraint on our content.
+
+- title: Cell
+  description: >
+    For this responsibility, we'll use the **Cell**.
+
+- description: >
+    Our base `.cell` is the most common occurence of the module, so it will set
+    the standard content width. We'll also create a `--l`, or large, modifier
+    class to manage the larger width constraint in the header.
+
+- description: >
+    Okay, let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that we have some vertical spacing at the top of our row of
+    content.
+
+- description: >
+    In the middle of the page...
+
+- description: >
+    We have some vertical spacing within our popular videos row, and the top of
+    the next content section.
+
+- description: >
+    And at the bottom of the page...
+
+- description: >
+    There is more top and bottom spacing for our content section, and then the
+    footer row.
+
+- title: Well
+  description: >
+    For this, we'll use the **Well**.
+
+- description: >
+    With the pattern/responsibility identified, we name and build the module.
+
+
+    We have our base `.well` class, as well as a large (`--l`) modifier class
+    to handle rows that need additional spacing.
+
+- title: Structure & Layout
+  description: >
+    Let's look for the next **Structure & Layout** pattern.
+
+- description: >
+    We can see that we have our elements arranged on a grid.
+
+- description: >
+    In the middle of the page...
+
+- description: >
+    We have more grids.
+
+- description: >
+    And in the footer...
+
+- description: >
+    We have some nested grids to get things arranged correctly.
+
+- title: Grid
+  description: >
+    Clearly, we'll use a **Grid** module to handle, well, the grid.
+
+
+    *Hopefully this is feeling familiar*.
+
+- description: >
+    With the pattern/responsibility identified, we can then build out our
+    encapsulated grid that can be combined with other similarly created
+    modules.
+
+- title: Common Patterns
+  description: >
+    Alright, with our structure and layout in place, let's look at some of
+    the **Common Patterns**.
+
+- description: >
+    Looking at the site...
+
+- description: >
+    We can see that we have some element lists for things like navigation and
+    metadata.
+
+- description: >
+    In the middle of the page...
+
+- description: >
+    We have lists of stories with metadata.
+
+- description: >
+    And in the footer...
+
+- description: >
+    We have a block-level list of social links, as well as some standard inline
+    text lists at the very bottom.
+
+- title: List
+  description: >
+    We'll use the **List** module to handle this responsibility.
+
+- description: >
+    Unlike Dribbble, our base `.list` is, at least so far, usually an inline
+    list, so that will be the default. We'll also create a `--block` modifier
+    class to handle the block-level lists.
+
+- description: >
+    Alright, let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that we have a little magnifying glass icon for search.
+
+- description: >
+    In the middle of the page...
+
+- description: >
+    We have play icons on our videos.
+
+- description: >
+    And in the footer...
+
+- description: >
+    We have some social icons.
+
+- title: Icon
+  description: >
+    So, we'll build an **Icon** module to handle our site-wide icons.
+
+- description: >
+    With the pattern/responsibility identified, we just need to build out the
+    module.
+
+- description: >
+    Let's see if we can identify another **Common Pattern**.
+
+- description: >
+    We can see that we have a section of stories with a media element (image
+    for the story), with content float next to it.
+
+- title: Bucket
+  description: >
+    If you recall, that's the media object or, what we call, the **Bucket**.
+
+- description: >
+    With the pattern/responsibility identified, we can then build the module.
+
+- description: >
+    Okay. Looking at our site, we can see another **Common Pattern**.
+
+- description: >
+    In our footer, we have some clickable buttons.
+
+- title: Button
+  description: >
+    Obviously, it would be a good idea to create a **Button** module.
+
+- description: >
+    With our pattern identified, we can define and build out module.
+
+- description: >
+    Looking back at our site, we see another **Common Pattern**.
+
+- description: >
+    A **Form** for 'The Daily Digg' email.
+
+- title: Form
+  description: >
+    Like with Dribbble, we're going to plan ahead on needing more forms.
+
+- description: >
+    We build a simple **Form** module with a base class, and a submodule class
+    for the `form-input`.
+
+- title: Unique Patterns
+  description: >
+    Okay, that's it for our **Common Patterns**, so now we'll see if there are
+    any **Unique Patterns** in the site.
+
+- description: >
+    Similar to Dribbble, we might want to create `header` and `footer` modules
+    to manage any typography in those areas, and even a `story` module to
+    handle the typography of each of our news stories.
+
+- description: >
+    Alright, let's look at the front-end audit to see how our CSS architecture
+    is looking. We can see that we've used *a lot* of the same patterns on Digg
+    as we did on Dribbble. This illustrates that, if you write things
+    modularly, you can easily reuse your modules from project to project.
+
+- description: >
+    And, if you want to take a look at the code, here's the URL again.
+
+- title: Always Be Evaluating
+  description: >
+    I'd like to briefly sum everything up by saying, "Always Be Evaluating."
+    Make sure that you spend the time assessing your code and your methods for
+    writing your CSS in order to improve you efficiency and thought process. We
+    always hate things we wrote a few weeks ago, and that's what will drive you
+    to write better, more modular CSS.
+
+- description: >
+    Thank you!
