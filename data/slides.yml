@@ -21,7 +21,8 @@
     unimpressed.
 
 - description: >
-    However, I think I was more just in awe while looking at all the bacon.
+    However, I think I was more just in awe while looking at all the
+    bacon-themed snacks.
 
 
     *If you've been here before, you know what I'm talking about.*
@@ -106,9 +107,6 @@
     ideas of "Modular CSS," so let's talk about those ideas.
 
 
-    *Before we dig into the thinking behind modular CSS, it's important to
-    define it, and talk about the tenets of modular CSS*.
-
 - description: >
     I will use the words module, pattern, and component interchangeably; they
     all refer to a set of self-contained styles.
@@ -147,7 +145,7 @@
     Your CSS should be:
 
 
-    - Broken down into smaller parts, smaller chunks of styles.
+    - Broken down into smaller parts, smaller sets of styles.
 
     - Independently created, so you're modules can be properly encapsulated
       (which we'll get more into in a bit).
@@ -225,8 +223,8 @@
     We could just target the `.btn` and position it.
 
 
-    Obviously, though, we don't want every button to be absolutely positioned.
-    Okay, let’s scope it.
+    Obviously, though, we don't want *every* button to be absolutely
+    positioned.
 
 - description: >
     We could just target the `.btn` within the `.omnibar`, but we're breaking
@@ -266,7 +264,7 @@
     IDs are too specific, and they'll cause you unnecessary headaches.
 
 - description: >
-    Classes, on the other hand, flatten the specificity of your elements to
+    Classes, on the other hand, flatten the specificity of your modules to
     make sure your styles are applied properly without having to fuss with
     specificity issues.
 
@@ -289,6 +287,9 @@
     Nick Walsh, a front-end developer at Envy Labs, had this great quote that
     we always reference when we talk about how we write our CSS, and how
     frequently we change it.
+
+
+    **This is how it is now, until we change it.**
 
 - description: >
     It's very true. We constantly evaluate and evolve the system as we work on
@@ -331,9 +332,13 @@
     So here we define our button modifier, which is an alternate styling of the
     base `.btn`.
 
+
+    *Note: we're using "b" as a hierarchical designation for our alternate
+    button, since it's a "secondary" button.*
+
 - description: >
-    We call our `.btn` class for the base button, and add both the base `.btn`
-    class and the `.btn--b` modifier class on the modified button.
+    We call our `btn` class for the base button, and add both the base `btn`
+    class and the `btn--b` modifier class on the modified button.
 
 - title: States
   description: >
@@ -348,13 +353,14 @@
 
 - description: >
     So, for example, we have this `.dropdown` that is hidden by default, and is
-    shown when the `.is-active` state class is added. Simple as that.
+    shown when the `is-active` state class is added. Simple as that.
 
 - title: Context
   description: >
     Next, we have **Context**. Oftentimes, in CSS, we'll need a parent
     container to be adjusted in order for our module to be styled correctly.
-    For this, we use a context class.
+    For this, we use a context class because we don't want the parent container
+    to make a change for another module, thus breaking encapsulation.
 
 - description: >
     We use the convention `has` hyphen (`-`) context name.
@@ -367,7 +373,8 @@
     this for us.
 
 - description: >
-    And then we add that context class to our parent container.
+    And then we add that context class to our parent container, which keeps our
+    modules independently created.
 
 - title: Submodules
   description: >
@@ -397,20 +404,20 @@
 
 - title: Abstract Structure
   description: >
-    In addition to magic numbers, layout and positioning in CSS can cause you a
-    lot of headaches when trying to keep your styles flexible. Let's look at an
-    example.
+    The next practical application of "Modular CSS" is to **Abstract
+    Structure**. Let's look at an example.
 
 - description: >
-    This is all well and good until we have a second `.nav` block that needs to
-    be positioned to the left, or even centered.
+    So here we have a `.nav` module that is being floated to the right with a
+    set `50%` width.  This is all well and good until we have a second `.nav`
+    block that needs to be positioned to the left, or even centered.
 
 - description: >
     Ask yourself, why is this navigation block being positioned to the right at
     `50%`?
 
 - description: >
-    Is it because it's in another module?
+    Is it because it's in another module, like our site-wide header?
 
 - description: >
     Abstract up!
@@ -435,8 +442,9 @@
     them, which is sometimes unavoidable, make sure to document it.
 
 - description: >
-    Now I have a way to search across the project and find the magic numbers
-    whenever I do a refactor.
+    Simply add a comment marking it as a "magic number." Now we have a way to
+    search across the project and find the magic numbers whenever we do a
+    refactor.
 
 - title: Evolution of Modular CSS
   description: >
@@ -459,7 +467,7 @@
     What happens when that `h2` turns into an `h3`?
 
 - description: >
-    Well, not only do you have to change it in the HTML, but you also have to
+    Well, not only do we have to change it in the HTML, but we also have to
     change it in the CSS.
 
 - description: >
@@ -478,7 +486,7 @@
     Ok ok, we'll abstract the name!
 
 - description: >
-    Okay, we call it a card; that's way more abstract, so we're good, right?
+    Okay, we call it a `card`; that's way more abstract, so we're good, right?
     Well not quite.
 
 - description: >
@@ -487,13 +495,14 @@
     see where this is headed.
 
 - description: >
-    We change the `.card-list` to `.list`.
+    We change the `.card-list` to `.list`, thus creating a new standalone
+    `list` module.
 
 - description: >
     Now we have our `.card` styles and our `.list` styles separate.
 
 - description: >
-    And this keeps happening for all of the elements in the `.card` until we
+    But this keeps happening for all of the elements in the `.card` until we
     have realize that it's not just a `shot` or a `card`.
 
 - description: >
@@ -536,10 +545,10 @@
 - title: Row
   description: >
     The first pattern is the **Row**. Freqently on the web, you'll see these
-    full-width bars, generally with a `background-color` or image.
+    full-width bars, generally with a `background-color` or image. They are a
+    very common layout pattern that we'll reuse from site to site.
 
 - description: >
-    They are a very common layout pattern that we'll reuse from site to site.
     You can see it here on [Twitter's About page](https://about.twitter.com/).
     They have a few different row variations, or modifiers.
 
@@ -570,15 +579,15 @@
 
 - title: Well
   description: >
-    We call this pattern the **Well**, and it handles the vertical spacing on
-    the top and bottom, and it generally resides within a row.
+    We call this next pattern the **Well**, and it handles the vertical
+    spacing, and it generally resides within a row.
 
 - description: >
-    Again, on Meagan Fisher's site, you can see that there is some set spacing
-    at the top and bottom of each row, and alongside each cell that is handling
-    the width limiting.
+    Again, on Meagan Fisher's site...
 
 - description: >
+    You can see that there is some set spacing at the top and bottom of each
+    row, and alongside each cell that is handling the width limiting.
 
 - description: >
     The cell and well are used in conjunction with one another.
@@ -593,17 +602,17 @@
     web, and they are a very common and clear pattern to identify.
 
 - description: >
-    On the [GitHub Guides](http://guides.github.com) page, we can see that they
-    have each "guide" split into a `50/50` grid.
+    On the [GitHub Guides](http://guides.github.com) page...
 
 - description: >
+    We can see that they have each "guide" split into a `50/50` grid.
 
 - description: >
-    And on the [GitHub user profile](http://github.com/drewbarontini) page, we
-    can see that they have a lot of different grids, including grids inside of
-    grids.
+    And on the [GitHub user profile](http://github.com/drewbarontini) page...
 
 - description: >
+    We can see that they have a lot of different grids, including grids inside
+    of grids.
 
 - title: Bucket
   description: >
@@ -626,8 +635,9 @@
 
 - title: Common Patterns
   description: >
-    Next, look for the common patterns that you continually encounter and build
-    for each project.
+    Once the **Structure & Layout** patterns are identified, look for the
+    **Common Patterns** that you continually encounter and build for each
+    project.
 
 - title: Card
   description: >
@@ -646,16 +656,11 @@
     you'll have to write on each site.
 
 
-    I try to break down a list module into simple text lists, and simple
-    objects lists. Beyond that, you might have more complex and unique lists,
-    but we’re trying to write a modular list that applies to various patterns
-    without breaking the Single Responsibility Principle.
+- description: >
+    Here, on the [Designer News](http://news.layervault.com/) site...
 
 - description: >
-    Here, on the [Designer News](http://news.layervault.com/) site, we have a
-    variety of different lists.
-
-- description: >
+    We have a variety of different lists.
 
 - title: Unique Patterns
   description: >
@@ -666,8 +671,8 @@
     Again on Dribbble, we can see an example of a more unique pattern.
 
 - description: >
-    Each shot page has a color list of colors contained within a shot. This is
-    a type of list, but it's a more specific pattern to this particular site.
+    Each shot page has a list of colors contained within a shot. This is a type
+    of list, but it's a more specific pattern to this particular site.
 
 - title: Front-end Audit
   description: >
@@ -683,8 +688,8 @@
 - title: Define
   description: >
     After you've identified the pattern(s), you need to define them. This is
-    always the fun part in the front-end world. Naming is tricky, and you want
-    to give it a meaningful name that isn't overly specific.
+    always the fun part in the front-end world. Naming is tricky because we
+    want to give it a meaningful name that isn't overly specific.
 
 - title: Responsibility
   description: >
@@ -695,7 +700,7 @@
     For example, this module handles the video player.
 
 - description: >
-    Now that its responsibility is determined, we can easily name the class.
+    Now that its responsibility is defined, we can easily name the class.
 
 - description: >
     And any modifiers.
@@ -705,10 +710,11 @@
 
 - title: Build
   description: >
-    Now that the pattern is identified and defined, you can build the module.
+    Now that the pattern is identified and defined, we can build the module.
 
 - description: >
-    We write out our styling for the module.
+    This is the fun part, because it's where we write out our styling for the
+    module.
 
 - title: Combine
   description: >
@@ -721,8 +727,8 @@
     styles.
 
 - description: >
-    For example, your layout patterns — `row`, `cell`, and `grid`, will be
-    used in conjuntion with one another to lay out the page.
+    For example, your layout patterns — `row`, `cell`, `well`, and `grid`, will
+    be used in conjunction with one another to lay out the page.
 
 - description: >
     As you can see here, we're using our card (stylistic container) alongside
@@ -734,16 +740,19 @@
     With all of your modules now working together, you'll want to refine, or
     refactor, as necessary.
 
+
+    **This is a constant, iterative process**.
+
 - description: >
     You're never going to write something perfect the first time (most likely).
 
 - description: >
-    Be sure to constantly evaluate and refactor your CSS code.
+    Be sure to constantly evaluate and refactor your CSS.
 
 - description: >
     Don't be afraid to write something specifically, and abstract as you build
     out the site. Frequently, we're building sites in an unpredictable manner,
-    so we'll have to change the structure are we build out the system.
+    so we'll have to change the structure as we build out the system.
 
 - description: >
     Find weaknesses in your code!
@@ -772,14 +781,14 @@
     Use tools like [csscss](https://github.com/zmoazeni/csscss),
     [csslint](https://github.com/CSSLint/csslint), and [Style
     Stats](https://github.com/t32k/stylestats) to help you spot repetition of
-    your code. Use things like `@extend` in Sass, or abstract out shared styles
-    to another module.
+    your code, as well as other useful information. You can also use things
+    like `@extend` in Sass, or abstract out shared styles to another module.
 
 - title: Examples
   description: >
     Now that we've defined "Modular CSS" and talked about the process of
-    discovering and writing patterns, let's take that knowledge and walk
-    through some real sites and determine how we'd structure our CSS.
+    discovering, writing, and refining patterns, let's take that knowledge and
+    walk through some real sites to determine how we'd structure our CSS.
 
 - title: Dribbble
   description: >
@@ -827,7 +836,8 @@
 
     The `--a` and `--b` modifier classes are used to indicate hierarchy, since
     I want the dark grey row to be the primary row, and the white background to
-    be the secondary row.
+    be the secondary row. *It's important to note that this can change as you
+    build out the site*.
 
 - description: >
     Alright, now let's look for the next **Structure & Layout** pattern.
@@ -937,12 +947,12 @@
     Generally, I like to limit my **List** module to handling text-only lists.
     However, I've recently added the "object" list, which does a `display: block`
     and `float: left`, and this is for those non-text items that can still easily
-    be managed by the **List** module.
+    be managed by the **List** module without stretching its responsibility.
 
 - description: >
     With the pattern identified, we can build the module.
 
-    Here, we're defining out base module, which will be `block` by
+    Here, we're defining our base module, which will be `block` by
     default-since it's the most common occurrence-and then `inline` and
     `object` modifiers.
 
@@ -968,15 +978,15 @@
     We can see that we have a lot of icons used throughout the site.
 
 - description: >
-    And in the footer area, there are some additional icons we'll need to
-    manage.
+    And in the footer area...
 
 - description: >
+    There are some additional icons we'll need to manage.
 
 - title: Icon
   description: >
-    Clearly, we'll create an **Icon** module to handle this for us. We could
-    get into a long discussion on the **how** of managing icons on a site, but
+    We'll create an **Icon** module to handle this for us. We could get into a
+    really long discussion on the **how** of managing icons on a site, but
     that's not the important part here.
 
 - description: >
@@ -999,7 +1009,7 @@
     We have our base `.form` module, and then the `.form-input` submodule for
     this search input. Now, since we have the search icon within the input,
     we'll want to create a `.form-input--search` modifier to handle those
-    styles.
+    alternate styles.
 
 - description: >
     Alright, let's look for the next **Common Pattern**.
@@ -1133,7 +1143,7 @@
       white background and shadow, and then the medium grey footer background.
 
     - And then a `highlight` modifier for that upcoming videos row, since I
-      don't want to classify that as a hierarchical thing. However, that might
+      don't want to classify that as a hierarchical element. However, that might
       change as we build out the site.
 
 - description: >
@@ -1195,11 +1205,10 @@
     With the pattern/responsibility identified, we name and build the module.
 
 
-    We have our base `.well` class, as well as a large (`--l`) modifier class
+    We have our base `well` class, as well as a large (`--l`) modifier class
     to handle rows that need additional spacing.
 
-- title: Structure & Layout
-  description: >
+- description: >
     Let's look for the next **Structure & Layout** pattern.
 
 - description: >
@@ -1356,6 +1365,9 @@
     writing your CSS in order to improve you efficiency and thought process. We
     always hate things we wrote a few weeks ago, and that's what will drive you
     to write better, more modular CSS.
+
+
+    **It's a process**.
 
 - description: >
     Thank you!

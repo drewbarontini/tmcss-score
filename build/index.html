@@ -111,7 +111,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>However, I think I was more just in awe while looking at all the bacon.</p>
+                  <p>However, I think I was more just in awe while looking at all the bacon-themed snacks.</p>
                   
                   <p><em>If you&#39;ve been here before, you know what I&#39;m talking about.</em></p>
                 </div>
@@ -346,8 +346,6 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Modular CSS</h1>
                   <p>In order to create flexible and modular systems, we have to adhere to the ideas of &quot;Modular CSS,&quot; so let&#39;s talk about those ideas.</p>
-                  
-                  <p><em>Before we dig into the thinking behind modular CSS, it&#39;s important to define it, and talk about the tenets of modular CSS</em>.</p>
                 </div>
               </div>
             </section>
@@ -462,7 +460,7 @@
                   <p>Your CSS should be:</p>
                   
                   <ul>
-                  <li>Broken down into smaller parts, smaller chunks of styles.</li>
+                  <li>Broken down into smaller parts, smaller sets of styles.</li>
                   <li><p>Independently created, so you&#39;re modules can be properly encapsulated
                   (which we&#39;ll get more into in a bit).</p></li>
                   <li><p>Have the ability to be ported from system to system with minor
@@ -657,7 +655,7 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>We could just target the <code>.btn</code> and position it.</p>
                   
-                  <p>Obviously, though, we don&#39;t want every button to be absolutely positioned. Okay, let’s scope it.</p>
+                  <p>Obviously, though, we don&#39;t want <em>every</em> button to be absolutely positioned.</p>
                 </div>
               </div>
             </section>
@@ -758,7 +756,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Classes, on the other hand, flatten the specificity of your elements to make sure your styles are applied properly without having to fuss with specificity issues.</p>
+                  <p>Classes, on the other hand, flatten the specificity of your modules to make sure your styles are applied properly without having to fuss with specificity issues.</p>
                 </div>
               </div>
             </section>
@@ -822,6 +820,8 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>Nick Walsh, a front-end developer at Envy Labs, had this great quote that we always reference when we talk about how we write our CSS, and how frequently we change it.</p>
+                  
+                  <p><strong>This is how it is now, until we change it.</strong></p>
                 </div>
               </div>
             </section>
@@ -944,6 +944,8 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>So here we define our button modifier, which is an alternate styling of the base <code>.btn</code>.</p>
+                  
+                  <p><em>Note: we&#39;re using &quot;b&quot; as a hierarchical designation for our alternate button, since it&#39;s a &quot;secondary&quot; button.</em></p>
                 </div>
               </div>
             </section>
@@ -955,7 +957,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We call our <code>.btn</code> class for the base button, and add both the base <code>.btn</code> class and the <code>.btn--b</code> modifier class on the modified button.</p>
+                  <p>We call our <code>btn</code> class for the base button, and add both the base <code>btn</code> class and the <code>btn--b</code> modifier class on the modified button.</p>
                 </div>
               </div>
             </section>
@@ -1004,7 +1006,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>So, for example, we have this <code>.dropdown</code> that is hidden by default, and is shown when the <code>.is-active</code> state class is added. Simple as that.</p>
+                  <p>So, for example, we have this <code>.dropdown</code> that is hidden by default, and is shown when the <code>is-active</code> state class is added. Simple as that.</p>
                 </div>
               </div>
             </section>
@@ -1017,7 +1019,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Context</h1>
-                  <p>Next, we have <strong>Context</strong>. Oftentimes, in CSS, we&#39;ll need a parent container to be adjusted in order for our module to be styled correctly. For this, we use a context class.</p>
+                  <p>Next, we have <strong>Context</strong>. Oftentimes, in CSS, we&#39;ll need a parent container to be adjusted in order for our module to be styled correctly. For this, we use a context class because we don&#39;t want the parent container to make a change for another module, thus breaking encapsulation.</p>
                 </div>
               </div>
             </section>
@@ -1053,7 +1055,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And then we add that context class to our parent container.</p>
+                  <p>And then we add that context class to our parent container, which keeps our modules independently created.</p>
                 </div>
               </div>
             </section>
@@ -1129,7 +1131,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Abstract Structure</h1>
-                  <p>In addition to magic numbers, layout and positioning in CSS can cause you a lot of headaches when trying to keep your styles flexible. Let&#39;s look at an example.</p>
+                  <p>The next practical application of &quot;Modular CSS&quot; is to <strong>Abstract Structure</strong>. Let&#39;s look at an example.</p>
                 </div>
               </div>
             </section>
@@ -1141,7 +1143,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>This is all well and good until we have a second <code>.nav</code> block that needs to be positioned to the left, or even centered.</p>
+                  <p>So here we have a <code>.nav</code> module that is being floated to the right with a set <code>50%</code> width.  This is all well and good until we have a second <code>.nav</code> block that needs to be positioned to the left, or even centered.</p>
                 </div>
               </div>
             </section>
@@ -1165,7 +1167,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Is it because it&#39;s in another module?</p>
+                  <p>Is it because it&#39;s in another module, like our site-wide header?</p>
                 </div>
               </div>
             </section>
@@ -1238,7 +1240,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now I have a way to search across the project and find the magic numbers whenever I do a refactor.</p>
+                  <p>Simply add a comment marking it as a &quot;magic number.&quot; Now we have a way to search across the project and find the magic numbers whenever we do a refactor.</p>
                 </div>
               </div>
             </section>
@@ -1311,7 +1313,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Well, not only do you have to change it in the HTML, but you also have to change it in the CSS.</p>
+                  <p>Well, not only do we have to change it in the HTML, but we also have to change it in the CSS.</p>
                 </div>
               </div>
             </section>
@@ -1371,7 +1373,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Okay, we call it a card; that&#39;s way more abstract, so we&#39;re good, right? Well not quite.</p>
+                  <p>Okay, we call it a <code>card</code>; that&#39;s way more abstract, so we&#39;re good, right? Well not quite.</p>
                 </div>
               </div>
             </section>
@@ -1395,7 +1397,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We change the <code>.card-list</code> to <code>.list</code>.</p>
+                  <p>We change the <code>.card-list</code> to <code>.list</code>, thus creating a new standalone <code>list</code> module.</p>
                 </div>
               </div>
             </section>
@@ -1419,7 +1421,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And this keeps happening for all of the elements in the <code>.card</code> until we have realize that it&#39;s not just a <code>shot</code> or a <code>card</code>.</p>
+                  <p>But this keeps happening for all of the elements in the <code>.card</code> until we have realize that it&#39;s not just a <code>shot</code> or a <code>card</code>.</p>
                 </div>
               </div>
             </section>
@@ -1545,7 +1547,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Row</h1>
-                  <p>The first pattern is the <strong>Row</strong>. Freqently on the web, you&#39;ll see these full-width bars, generally with a <code>background-color</code> or image.</p>
+                  <p>The first pattern is the <strong>Row</strong>. Freqently on the web, you&#39;ll see these full-width bars, generally with a <code>background-color</code> or image. They are a very common layout pattern that we&#39;ll reuse from site to site.</p>
                 </div>
               </div>
             </section>
@@ -1557,7 +1559,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>They are a very common layout pattern that we&#39;ll reuse from site to site. You can see it here on <a href="https://about.twitter.com/">Twitter&#39;s About page</a>. They have a few different row variations, or modifiers.</p>
+                  <p>You can see it here on <a href="https://about.twitter.com/">Twitter&#39;s About page</a>. They have a few different row variations, or modifiers.</p>
                 </div>
               </div>
             </section>
@@ -1645,7 +1647,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Well</h1>
-                  <p>We call this pattern the <strong>Well</strong>, and it handles the vertical spacing on the top and bottom, and it generally resides within a row.</p>
+                  <p>We call this next pattern the <strong>Well</strong>, and it handles the vertical spacing, and it generally resides within a row.</p>
                 </div>
               </div>
             </section>
@@ -1657,7 +1659,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Again, on Meagan Fisher&#39;s site, you can see that there is some set spacing at the top and bottom of each row, and alongside each cell that is handling the width limiting.</p>
+                  <p>Again, on Meagan Fisher&#39;s site...</p>
                 </div>
               </div>
             </section>
@@ -1669,7 +1671,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  
+                  <p>You can see that there is some set spacing at the top and bottom of each row, and alongside each cell that is handling the width limiting.</p>
                 </div>
               </div>
             </section>
@@ -1718,7 +1720,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>On the <a href="http://guides.github.com">GitHub Guides</a> page, we can see that they have each &quot;guide&quot; split into a <code>50/50</code> grid.</p>
+                  <p>On the <a href="http://guides.github.com">GitHub Guides</a> page...</p>
                 </div>
               </div>
             </section>
@@ -1730,7 +1732,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  
+                  <p>We can see that they have each &quot;guide&quot; split into a <code>50/50</code> grid.</p>
                 </div>
               </div>
             </section>
@@ -1742,7 +1744,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And on the <a href="http://github.com/drewbarontini">GitHub user profile</a> page, we can see that they have a lot of different grids, including grids inside of grids.</p>
+                  <p>And on the <a href="http://github.com/drewbarontini">GitHub user profile</a> page...</p>
                 </div>
               </div>
             </section>
@@ -1754,7 +1756,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  
+                  <p>We can see that they have a lot of different grids, including grids inside of grids.</p>
                 </div>
               </div>
             </section>
@@ -1828,7 +1830,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Common Patterns</h1>
-                  <p>Next, look for the common patterns that you continually encounter and build for each project.</p>
+                  <p>Once the <strong>Structure &amp; Layout</strong> patterns are identified, look for the <strong>Common Patterns</strong> that you continually encounter and build for each project.</p>
                 </div>
               </div>
             </section>
@@ -1879,8 +1881,6 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Lists</h1>
                   <p><strong>Lists</strong> are everywhere on the web, and it&#39;s a very common pattern that you&#39;ll have to write on each site.</p>
-                  
-                  <p>I try to break down a list module into simple text lists, and simple objects lists. Beyond that, you might have more complex and unique lists, but we’re trying to write a modular list that applies to various patterns without breaking the Single Responsibility Principle.</p>
                 </div>
               </div>
             </section>
@@ -1892,7 +1892,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Here, on the <a href="http://news.layervault.com/">Designer News</a> site, we have a variety of different lists.</p>
+                  <p>Here, on the <a href="http://news.layervault.com/">Designer News</a> site...</p>
                 </div>
               </div>
             </section>
@@ -1904,7 +1904,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  
+                  <p>We have a variety of different lists.</p>
                 </div>
               </div>
             </section>
@@ -1941,7 +1941,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Each shot page has a color list of colors contained within a shot. This is a type of list, but it&#39;s a more specific pattern to this particular site.</p>
+                  <p>Each shot page has a list of colors contained within a shot. This is a type of list, but it&#39;s a more specific pattern to this particular site.</p>
                 </div>
               </div>
             </section>
@@ -1991,7 +1991,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Define</h1>
-                  <p>After you&#39;ve identified the pattern(s), you need to define them. This is always the fun part in the front-end world. Naming is tricky, and you want to give it a meaningful name that isn&#39;t overly specific.</p>
+                  <p>After you&#39;ve identified the pattern(s), you need to define them. This is always the fun part in the front-end world. Naming is tricky because we want to give it a meaningful name that isn&#39;t overly specific.</p>
                 </div>
               </div>
             </section>
@@ -2028,7 +2028,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Now that its responsibility is determined, we can easily name the class.</p>
+                  <p>Now that its responsibility is defined, we can easily name the class.</p>
                 </div>
               </div>
             </section>
@@ -2065,7 +2065,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Build</h1>
-                  <p>Now that the pattern is identified and defined, you can build the module.</p>
+                  <p>Now that the pattern is identified and defined, we can build the module.</p>
                 </div>
               </div>
             </section>
@@ -2077,7 +2077,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We write out our styling for the module.</p>
+                  <p>This is the fun part, because it&#39;s where we write out our styling for the module.</p>
                 </div>
               </div>
             </section>
@@ -2114,7 +2114,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>For example, your layout patterns — <code>row</code>, <code>cell</code>, and <code>grid</code>, will be used in conjuntion with one another to lay out the page.</p>
+                  <p>For example, your layout patterns — <code>row</code>, <code>cell</code>, <code>well</code>, and <code>grid</code>, will be used in conjunction with one another to lay out the page.</p>
                 </div>
               </div>
             </section>
@@ -2140,6 +2140,8 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Refine</h1>
                   <p>With all of your modules now working together, you&#39;ll want to refine, or refactor, as necessary.</p>
+                  
+                  <p><strong>This is a constant, iterative process</strong>.</p>
                 </div>
               </div>
             </section>
@@ -2163,7 +2165,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Be sure to constantly evaluate and refactor your CSS code.</p>
+                  <p>Be sure to constantly evaluate and refactor your CSS.</p>
                 </div>
               </div>
             </section>
@@ -2175,7 +2177,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Don&#39;t be afraid to write something specifically, and abstract as you build out the site. Frequently, we&#39;re building sites in an unpredictable manner, so we&#39;ll have to change the structure are we build out the system.</p>
+                  <p>Don&#39;t be afraid to write something specifically, and abstract as you build out the site. Frequently, we&#39;re building sites in an unpredictable manner, so we&#39;ll have to change the structure as we build out the system.</p>
                 </div>
               </div>
             </section>
@@ -2259,7 +2261,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Use tools like <a href="https://github.com/zmoazeni/csscss">csscss</a>, <a href="https://github.com/CSSLint/csslint">csslint</a>, and <a href="https://github.com/t32k/stylestats">Style Stats</a> to help you spot repetition of your code. Use things like <code>@extend</code> in Sass, or abstract out shared styles to another module.</p>
+                  <p>Use tools like <a href="https://github.com/zmoazeni/csscss">csscss</a>, <a href="https://github.com/CSSLint/csslint">csslint</a>, and <a href="https://github.com/t32k/stylestats">Style Stats</a> to help you spot repetition of your code, as well as other useful information. You can also use things like <code>@extend</code> in Sass, or abstract out shared styles to another module.</p>
                 </div>
               </div>
             </section>
@@ -2272,7 +2274,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Examples</h1>
-                  <p>Now that we&#39;ve defined &quot;Modular CSS&quot; and talked about the process of discovering and writing patterns, let&#39;s take that knowledge and walk through some real sites and determine how we&#39;d structure our CSS.</p>
+                  <p>Now that we&#39;ve defined &quot;Modular CSS&quot; and talked about the process of discovering, writing, and refining patterns, let&#39;s take that knowledge and walk through some real sites to determine how we&#39;d structure our CSS.</p>
                 </div>
               </div>
             </section>
@@ -2420,7 +2422,7 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>So with the pattern <em>identified</em>, we <em>define</em> the responsibility and name, and then <strong>build</strong> our base module, as well as our modifier classes for the alternate background colors.</p>
                   
-                  <p>The <code>--a</code> and <code>--b</code> modifier classes are used to indicate hierarchy, since I want the dark grey row to be the primary row, and the white background to be the secondary row.</p>
+                  <p>The <code>--a</code> and <code>--b</code> modifier classes are used to indicate hierarchy, since I want the dark grey row to be the primary row, and the white background to be the secondary row. <em>It&#39;s important to note that this can change as you build out the site</em>.</p>
                 </div>
               </div>
             </section>
@@ -2750,7 +2752,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>Generally, I like to limit my <strong>List</strong> module to handling text-only lists. However, I&#39;ve recently added the &quot;object&quot; list, which does a <code>display: block</code> and <code>float: left</code>, and this is for those non-text items that can still easily be managed by the <strong>List</strong> module.</p>
+                  <p>Generally, I like to limit my <strong>List</strong> module to handling text-only lists. However, I&#39;ve recently added the &quot;object&quot; list, which does a <code>display: block</code> and <code>float: left</code>, and this is for those non-text items that can still easily be managed by the <strong>List</strong> module without stretching its responsibility.</p>
                 </div>
               </div>
             </section>
@@ -2763,7 +2765,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>With the pattern identified, we can build the module.
-                  Here, we&#39;re defining out base module, which will be <code>block</code> by default-since it&#39;s the most common occurrence-and then <code>inline</code> and <code>object</code> modifiers.</p>
+                  Here, we&#39;re defining our base module, which will be <code>block</code> by default-since it&#39;s the most common occurrence-and then <code>inline</code> and <code>object</code> modifiers.</p>
                 </div>
               </div>
             </section>
@@ -2848,7 +2850,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>And in the footer area, there are some additional icons we&#39;ll need to manage.</p>
+                  <p>And in the footer area...</p>
                 </div>
               </div>
             </section>
@@ -2860,7 +2862,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  
+                  <p>There are some additional icons we&#39;ll need to manage.</p>
                 </div>
               </div>
             </section>
@@ -2873,7 +2875,7 @@
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Icon</h1>
-                  <p>Clearly, we&#39;ll create an <strong>Icon</strong> module to handle this for us. We could get into a long discussion on the <strong>how</strong> of managing icons on a site, but that&#39;s not the important part here.</p>
+                  <p>We&#39;ll create an <strong>Icon</strong> module to handle this for us. We could get into a really long discussion on the <strong>how</strong> of managing icons on a site, but that&#39;s not the important part here.</p>
                 </div>
               </div>
             </section>
@@ -2934,7 +2936,7 @@
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <p>We have our base <code>.form</code> module, and then the <code>.form-input</code> submodule for this search input. Now, since we have the search icon within the input, we&#39;ll want to create a <code>.form-input--search</code> modifier to handle those styles.</p>
+                  <p>We have our base <code>.form</code> module, and then the <code>.form-input</code> submodule for this search input. Now, since we have the search icon within the input, we&#39;ll want to create a <code>.form-input--search</code> modifier to handle those alternate styles.</p>
                 </div>
               </div>
             </section>
@@ -3304,7 +3306,7 @@
                   <li><p>Two modifiers (<code>--a</code>, <code>--b</code>) for hierarchical header/footer rows, so the
                   white background and shadow, and then the medium grey footer background.</p></li>
                   <li><p>And then a <code>highlight</code> modifier for that upcoming videos row, since I
-                  don&#39;t want to classify that as a hierarchical thing. However, that might
+                  don&#39;t want to classify that as a hierarchical element. However, that might
                   change as we build out the site.</p></li>
                   </ul>
                 </div>
@@ -3514,19 +3516,18 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <p>With the pattern/responsibility identified, we name and build the module.</p>
                   
-                  <p>We have our base <code>.well</code> class, as well as a large (<code>--l</code>) modifier class to handle rows that need additional spacing.</p>
+                  <p>We have our base <code>well</code> class, as well as a large (<code>--l</code>) modifier class to handle rows that need additional spacing.</p>
                 </div>
               </div>
             </section>
             <section class='bdrb mbl pbl' data-id='277'>
-              <div class='grid' id='structure--layout'>
+              <div class='grid' id='slide-277'>
                 <div class='grid-box grid-box--desk--1of2'>
                   <div class='mbmbfm--desk'>
-                    <img alt="Structure &amp; Layout" width="1024" height="768" src="assets/images/slides/277.png" />
+                    <img alt="" width="1024" height="768" src="assets/images/slides/277.png" />
                   </div>
                 </div>
                 <div class='grid-box grid-box--desk--1of2'>
-                  <h1 class='h2'>Structure & Layout</h1>
                   <p>Let&#39;s look for the next <strong>Structure &amp; Layout</strong> pattern.</p>
                 </div>
               </div>
@@ -4031,6 +4032,8 @@
                 <div class='grid-box grid-box--desk--1of2'>
                   <h1 class='h2'>Always Be Evaluating</h1>
                   <p>I&#39;d like to briefly sum everything up by saying, &quot;Always Be Evaluating.&quot; Make sure that you spend the time assessing your code and your methods for writing your CSS in order to improve you efficiency and thought process. We always hate things we wrote a few weeks ago, and that&#39;s what will drive you to write better, more modular CSS.</p>
+                  
+                  <p><strong>It&#39;s a process</strong>.</p>
                 </div>
               </div>
             </section>
