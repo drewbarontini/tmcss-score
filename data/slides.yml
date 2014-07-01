@@ -912,6 +912,32 @@
     `.cell` and `.well`, which will each handle their single responsibility
     without knowing about one another.
 
+- description: >
+    Let's look for the next **Common Pattern**.
+
+- description: >
+    We can see that, under each shot, there is an author image, or media
+    element, with their name, or content, floated next to it.
+
+- description: >
+    In the footer...
+
+- description: >
+    We can see the same pattern for a few different elements.
+
+
+    - The 'Equipment Shop' blurb
+
+    - The ad
+
+    - The number of pixels dribbble infographic
+
+- description: >
+    For this, we'll use the **Bucket**, also known as the media object.
+
+- description: >
+    With the pattern identified, we can build it out.
+
 - title: Common Patterns
   description: >
     Alright, now let's look for those **Common Patterns**.
@@ -1026,32 +1052,6 @@
 
 - description: >
     With the pattern identified, we can then build it.
-
-- description: >
-    Let's look for the next **Common Pattern**.
-
-- description: >
-    We can see that, under each shot, there is an author image, or media
-    element, with their name, or content, floated next to it.
-
-- description: >
-    In the footer...
-
-- description: >
-    We can see the same pattern for a few different elements.
-
-
-    - The 'Equipment Shop' blurb
-
-    - The ad
-
-    - The number of pixels dribbble infographic
-
-- description: >
-    For this, we'll use the **Bucket**, also known as the media object.
-
-- description: >
-    With the pattern identified, we can build it out.
 
 - title: Unique Patterns
   description: >
@@ -1238,6 +1238,20 @@
     encapsulated grid that can be combined with other similarly created
     modules.
 
+- description: >
+    Let's see if we can identify another **Structure & Layout** pattern.
+
+- description: >
+    We can see that we have a section of stories with a media element (image
+    for the story), with content float next to it.
+
+- title: Bucket
+  description: >
+    If you recall, that's the media object or, what we call, the **Bucket**.
+
+- description: >
+    With the pattern/responsibility identified, we can then build the module.
+
 - title: Common Patterns
   description: >
     Alright, with our structure and layout in place, let's look at some of
@@ -1297,20 +1311,6 @@
 - description: >
     With the pattern/responsibility identified, we just need to build out the
     module.
-
-- description: >
-    Let's see if we can identify another **Common Pattern**.
-
-- description: >
-    We can see that we have a section of stories with a media element (image
-    for the story), with content float next to it.
-
-- title: Bucket
-  description: >
-    If you recall, that's the media object or, what we call, the **Bucket**.
-
-- description: >
-    With the pattern/responsibility identified, we can then build the module.
 
 - description: >
     Okay. Looking at our site, we can see another **Common Pattern**.
