@@ -272,7 +272,10 @@
     This may seem redundant, but we want to call `.table`, not `table`.
 
 - description: >
+    The `table` element is on a different specificity level.
+
 - description: >
+    The `.table` class puts it on the same level as our other modules.
 
 - title: Establish Naming Conventions
   description: >
@@ -306,11 +309,14 @@
     can help guide you to establishing your own naming conventions.*
 
 - description: >
-    We use camelCase for multiple words, and we use a hyphen to separate a
-    module from a submodule.
+    We use camelCase for multiple words, and we use a hyphen to separate
+    multiple words with meanings.
 
 - title: Modifiers
   description: >
+    The first word with meaning is for **Modifiers**.
+
+
     If you're familiar with the [BEM Methodology](http://bem.info/method/),
     this is the same idea.
 
@@ -345,7 +351,7 @@
     Next we have **States**.
 
 - description: >
-    **States** are generally used for hooks that are added conditionally via
+    **States** are generally used for hooks that are added conditionally with
     JavaScript.
 
 - description: >
@@ -372,9 +378,14 @@
     relative` to that parent container, we can use a "context" class to handle
     this for us.
 
+
 - description: >
     And then we add that context class to our parent container, which keeps our
     modules independently created.
+
+
+    In this instance, the `.container` isn't making a change to accomodate our
+    `.dropdown`. It doesn't even need to know about it, and this handles that.
 
 - title: Submodules
   description: >
@@ -453,14 +464,15 @@
 
 - description: >
     We'll use the Dribbble shot as an example. How would we have marked this
-    up initially with the advent of "modular" CSS?
+    up?
 
 - description: >
     Initially, we would have marked this up with a class of `shot`, and then
     all of our HTML elements inside.
 
 - description: >
-    We called those elements scoped within the `.shot` class.
+    We called those elements scoped within the `.shot` class in order to style
+    them.
 
 - description: >
     This worked, but we quickly ran into issues when we changed the markup.
@@ -507,6 +519,9 @@
 
 - description: >
     It's several modules working together to build the pattern.
+
+
+    **This is the realization that we're having now**.
 
 - description: >
     It's a collection of independently created modules that can be used
@@ -572,10 +587,11 @@
     contained. We call this a **Cell**.
 
 - description: >
-    On [Meagan Fisher's site](http://owltastic.com/), she has her content
-    contained within a set width so that things line up nicely.
+    On [Meagan Fisher's site](http://owltastic.com/)...
 
 - description: >
+    She has her content contained within a set width so that things line up
+    nicely.
 
 - title: Well
   description: >
@@ -639,16 +655,28 @@
     **Common Patterns** that you continually encounter and build for each
     project.
 
+
+    Let's look at some example common patterns.
+
 - title: Card
   description: >
-    **Cards** are stylistic containers for content that generally have some
-    `background-color`, a `border-radius`, a `box-shadow` or `border`, and some
-    `padding`.
+    **Cards** are stylistic containers for content that generally have the
+    following styles:
+
+
+    - `background-color`
+
+    - `border-radius`
+
+    - `box-shadow` or `border`
+
+    - `padding`
 
 - description: >
-    Here, this is what I’d call a card on Dribbble:
+    Looking at Dribbble...
 
 - description: >
+    Each shot has a stylistic container that I'd call a card.
 
 - title: Lists
   description: >
