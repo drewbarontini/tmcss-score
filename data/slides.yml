@@ -913,7 +913,7 @@
     without knowing about one another.
 
 - description: >
-    Let's look for the next **Common Pattern**.
+    Let's look for the next **Structure & Layout** pattern.
 
 - description: >
     We can see that, under each shot, there is an author image, or media
@@ -960,7 +960,7 @@
     And looking at the bottom of the site...
 
 - description: >
-    - There is a list of blog posts
+    - There is a list of job posts
 
     - Block-level lists of links in the footer
 
@@ -1047,7 +1047,7 @@
 
 - title: Card
   description: >
-    We call this pattern a **Card**. It's responsibility is to handle the
+    We call this pattern a **Card**. Its responsibility is to handle the
     site-wide stylistic containers.
 
 - description: >
