@@ -560,8 +560,7 @@
 - title: Row
   description: >
     The first pattern is the **Row**. Freqently on the web, you'll see these
-    full-width bars, generally with a `background-color` or image. They are a
-    very common layout pattern that we'll reuse from site to site.
+    full-width bars, generally with a `background-color` or image.
 
 - description: >
     You can see it here on [Twitter's About page](https://about.twitter.com/).
