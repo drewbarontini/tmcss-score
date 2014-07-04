@@ -147,7 +147,7 @@
 
     - Broken down into smaller parts, smaller sets of styles.
 
-    - Independently created, so you're modules can be properly encapsulated
+    - Independently created, so your modules can be properly encapsulated
       (which we'll get more into in a bit).
 
     - Have the ability to be ported from system to system with minor
@@ -167,8 +167,8 @@
 
 - title: Single Responsibility Principle
   description: >
-    Those concepts are present in the "Single Responsibility Principle," which
-    is something that I always try to adhere to.
+    It also adheres to the "Single Responsibility Principle," which is
+    something that I always try to adhere to.
 
 - description: >
     The single responsibility principle states that every class should have a
@@ -189,7 +189,7 @@
     Now we know what our module is responsible for, so we can build it.
 
 - description: >
-    Here we have the cell module that handles the container for content. It
+    Here we have a `.cell` module that handles the container for content. It
     makes sure that a section is centered and has its `max-width` set
     appropriately.
 
@@ -524,8 +524,8 @@
     **This is the realization that we're having now**.
 
 - description: >
-    It's a collection of independently created modules that can be used
-    together to create multiple style patterns.
+    We're creating a collection of independently created modules that can be
+    used together to create multiple style patterns.
 
 - description: >
     How do we find these patterns?
@@ -605,10 +605,10 @@
     row, and alongside each cell that is handling the width limiting.
 
 - description: >
-    The cell and well are used in conjunction with one another.
+    The `.cell` and `.well` are used in conjunction with one another.
 
 - description: >
-    And you can specify modifiers to your well that will handle various
+    And you can specify modifiers to your `.well` that will handle various
     vertical margins, like this `--l`, or **large** modifier.
 
 - title: Grids
@@ -715,8 +715,8 @@
 - title: Define
   description: >
     After you've identified the pattern(s), you need to define them. This is
-    always the fun part in the front-end world. Naming is tricky because we
-    want to give it a meaningful name that isn't overly specific.
+    the tedious part, because we want to give it a meaningful name that isn't
+    overly specific.
 
 - title: Responsibility
   description: >
@@ -791,8 +791,7 @@
 - description: >
     Are you setting fixed widths on non-layout modules? You want your modules
     to flex to fit any container, and this is an easy way to spot places you
-    need to refactor. Are you forcing `absolute` or `fixed` positioning on
-    elements that shouldn't have it?
+    need to refactor.
 
 - description: >
     If you find yourself unsetting a lot of styles, you might want to consider
@@ -957,7 +956,7 @@
 
     - The ad
 
-    - The number of pixels dribbble infographic
+    - The number of pixels dribbbled infographic
 
 - description: >
     For this, we'll use the **Bucket**, also known as the media object.
@@ -1120,8 +1119,8 @@
     news stories and videos.
 
 - description: >
-    First, we'll get a lay-of-the-land. We can see that we have a header, list
-    of articles.
+    First, we'll get a lay-of-the-land. We can see that we have a header and
+    list of articles.
 
 - description: >
     A section for the most popular videos, as well as a few different story
@@ -1270,7 +1269,7 @@
 
 - description: >
     We can see that we have a section of stories with a media element (image
-    for the story), with content float next to it.
+    for the story), with content floated next to it.
 
 - title: Bucket
   description: >
@@ -1350,7 +1349,7 @@
     Obviously, it would be a good idea to create a **Button** module.
 
 - description: >
-    With our pattern identified, we can define and build out module.
+    With our pattern identified, we can define and build out the module.
 
 - description: >
     Looking back at our site, we see another **Common Pattern**.
