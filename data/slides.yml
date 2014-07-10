@@ -228,12 +228,11 @@
 
 - description: >
     We could just target the `.btn` within the `.omnibar`, but we're breaking
-    the idea of encapsulation by having our two modules know about, and talk to one
-    another. Let's change this.
+    the idea of encapsulation by having our two modules know about, talk to,
+    and directly affect one another. Let's change this.
 
 - description: >
-    We add a new submodule class to the button, and now we can target that
-    class.
+    We add a new class to the button, and now we can target that class.
 
 - description: >
     We add both the `omnibar-btn` and `btn` class to the element to handle
@@ -318,7 +317,7 @@
 
 
     If you're familiar with the [BEM Methodology](http://bem.info/method/),
-    this is the same idea.
+    this is the same idea (the "M" in "BEM").
 
 - description: >
     A modifier is an alternate set of styling on a module.
@@ -421,7 +420,8 @@
 - description: >
     So here we have a `.nav` module that is being floated to the right with a
     set `50%` width.  This is all well and good until we have a second `.nav`
-    block that needs to be positioned to the left, or even centered.
+    block that needs to be positioned to the left, centered, or have a
+    different width.
 
 - description: >
     Ask yourself, why is this navigation block being positioned to the right at
@@ -515,7 +515,7 @@
 
 - description: >
     But this keeps happening for all of the elements in the `.card` until we
-    have realize that it's not just a `shot` or a `card`.
+    realize that it's not just a `shot` or a `card`.
 
 - description: >
     It's several modules working together to build the pattern.
